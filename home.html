@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+
+        function getStreamJsonUrl() {
+            var pathname = location.pathname,
+            protocol = location.protocol,
+            startIndex = 0;
+            if (protocol == 'file:') {
+                startIndex = 1;
+            }
+            return protocol + '//' + pathname.substring(startIndex, pathname.lastIndexOf('/') + 1) + 'Content/Stream.json';
+        }
+
+        $(function () {
+            $.ajax({
+                url: getStreamJsonUrl(),
+                //url: 'file://D:/Users/qizhang/Projects/Temp/MobileWeb/MobileWeb/Views/QSware/Content/Stream.json',
+                dataType: 'jsonp',
+                jsonpCallback: 'dataCallback',
+                success: function (data) {
+                    $.each(data, function (i, v) {
+                        $('#stream').append($('<li>', { text: v.Category }));
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="stream"></div>
+</body>
+</html>
