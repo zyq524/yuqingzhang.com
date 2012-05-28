@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -36,39 +36,11 @@
   </head>
 
 <body>
-    <div id="stream"></div>
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="static/scripts/bootstraper/bootstrap.min.js"></script>
-    
-    <script>
-
-        function getStreamJsonUrl() {
-            var pathname = location.pathname,
-            protocol = location.protocol,
-            startIndex = 0;
-            if (protocol == 'file:') {
-                startIndex = 1;
-            }
-            return protocol + '//' + pathname.substring(startIndex, pathname.lastIndexOf('/') + 1) + 'Content/Stream.json';
-        }
-
-        $(function () {
-            $.ajax({
-                //url: getStreamJsonUrl(),
-                url: 'http://zhangyuqinglabs.blob.core.windows.net/qswareportal/Content/Stream.json',
-                dataType: 'jsonp',
-                jsonpCallback: 'dataCallback',
-                success: function (data) {
-                    $.each(data, function (i, v) {
-                        $('#stream').append($('<li>', { text: v.Category }));
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
