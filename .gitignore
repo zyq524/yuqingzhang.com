@@ -2,3 +2,16 @@
 .project
 
 .DS_Store
+
+gallery/2011-09-edinburgh-scotland/images/*.jpg
+
+gallery/2011-09-edinburgh-scotland/thumbs/*.jpg
+
+gallery/2012-05-stavanger-norway/thumbs/*.jpg
+
+gallery/2012-05-stavanger-norway/images/*.jpg
+
+gallery/2011-09-highlands-scotland/thumbs/*.jpg
+
+gallery/2011-09-highlands-scotland/images/*.jpg
+
