@@ -1,5 +1,19 @@
-body {
+body, p {
 	font-family: "Open Sans", sans-serif;
+}
+
+a {
+	color: #999;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    outline: 0;
+    -webkit-transition: color .2s linear;
+    -moz-transition: color .2s linear;
+    transition: color .2s linear;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 .container #logo {
@@ -14,7 +28,7 @@ body {
 }
 
 .container #main {
-	font-size: 16px;
+    font-size: 16px;
 	line-height: 23px;
 }
 
@@ -29,14 +43,8 @@ body {
     margin: 0 7px;
 }
 
-.container #category a {
+.container #category1 a {
 	color: #383838;
-    text-decoration: none;
-    border-bottom:1px dotted ;
-    outline: 0;
-    -webkit-transition: color .2s linear;
-    -moz-transition: color .2s linear;
-    transition: color .2s linear;
 }
 
 .container #social {
@@ -47,5 +55,18 @@ body {
 
 .container #foot-text {
 	text-align: center;
-	padding-top: 200px;
+	padding-top: 250px;
+}
+
+.container .path {
+    font-size: 16px;
+    color: #CCC;
+}
+
+.container .pic-link {
+    border-bottom: none;
+}
+
+.container .pic-next-text {
+    padding-right: 10px;
 }

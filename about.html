@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -39,7 +39,10 @@
     <div class="container">
       
       <header id="header">
-
+        <p class="path">
+          <a href="home.html" class="pic-link"><img class="pic-next-text" src="static/imgs/icons/metroicons/back.png" alt /></a>
+          /<a href="home.html">Home</a>/<a href="about.html">About me</a>
+        </p>
       </header>
 	  <div id="main">
 
@@ -57,7 +60,7 @@
     <script src="static/scripts/bootstraper/bootstrap.min.js"></script>
     <script>
         $(function () {
-            $('#foot-text').append('&copy; ' + new Date().getFullYear());
+        	$('#foot-text').append('&copy; ' + new Date().getFullYear());
         });
     </script>
 </body>
