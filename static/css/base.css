@@ -16,6 +16,9 @@ a:hover {
     text-decoration: none;
 }
 
+.container #header{
+	padding-bottom: 30px;
+}
 .container #logo {
 	padding-top: 110px;
 	font-size: 39px;
@@ -30,6 +33,7 @@ a:hover {
 .container #main {
     font-size: 16px;
 	line-height: 23px;
+	min-height: 400px;
 }
 
 .container #category {
@@ -55,7 +59,6 @@ a:hover {
 
 .container #foot-text {
 	text-align: center;
-	padding-top: 250px;
 }
 
 .container .path {
@@ -69,4 +72,57 @@ a:hover {
 
 .container .pic-next-text {
     padding-right: 10px;
+}
+
+ul.albumn-cover {
+	overflow: hidden;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+ul.albumn-cover {
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;
+}
+
+@media only screen and (min-width: 768px)
+ul.albumn-cover li:nth-child(3n+1) {
+	clear: left;
+}
+
+ul.albumn-cover li {
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	margin-bottom: 1.75em;
+	float: left;
+	display: inline;
+	width: 28.33%;
+	clear: none;
+}
+
+ul.albumn-cover p.thumb {
+	float: none;
+	width: auto;
+	margin-right: 0;
+	margin-top: 0;
+	margin-left: 0;
+}
+
+ul.albumn-cover li p.thumb img {
+	padding: 0.625em;
+	background: white;
+	border: 1px solid #E5E5E5;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-moz-transition: opacity 0.5s ease;
+	-webkit-transition: opacity 0.5s ease;
+	-o-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+	border-radius: 0.25em;
 }

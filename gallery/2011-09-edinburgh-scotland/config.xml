@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<juiceboxgallery 
+
+	useFlickr="false"
+	resizeOnImport="true"
+	cropToFit="false"
+	galleryTitle="Edinburgh"
+	backgroundColor="rgba(255,255,255,1)"
+	indexPageName="2011-09-edinburgh-scotland.html"
+
+>
+  <image imageURL="images/IMG_6752.jpg"
+	thumbURL="thumbs/IMG_6752.jpg"
+	linkURL="images/IMG_6752.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6752]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6753.jpg"
+	thumbURL="thumbs/IMG_6753.jpg"
+	linkURL="images/IMG_6753.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6753]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6757.jpg"
+	thumbURL="thumbs/IMG_6757.jpg"
+	linkURL="images/IMG_6757.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6757]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6758.jpg"
+	thumbURL="thumbs/IMG_6758.jpg"
+	linkURL="images/IMG_6758.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6758]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6761.jpg"
+	thumbURL="thumbs/IMG_6761.jpg"
+	linkURL="images/IMG_6761.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6761]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6762.jpg"
+	thumbURL="thumbs/IMG_6762.jpg"
+	linkURL="images/IMG_6762.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6762]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6766.jpg"
+	thumbURL="thumbs/IMG_6766.jpg"
+	linkURL="images/IMG_6766.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6766]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6767.jpg"
+	thumbURL="thumbs/IMG_6767.jpg"
+	linkURL="images/IMG_6767.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6767]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6770.jpg"
+	thumbURL="thumbs/IMG_6770.jpg"
+	linkURL="images/IMG_6770.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6770]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6774.jpg"
+	thumbURL="thumbs/IMG_6774.jpg"
+	linkURL="images/IMG_6774.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6774]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6780.jpg"
+	thumbURL="thumbs/IMG_6780.jpg"
+	linkURL="images/IMG_6780.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6780]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6781.jpg"
+	thumbURL="thumbs/IMG_6781.jpg"
+	linkURL="images/IMG_6781.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6781]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6787.jpg"
+	thumbURL="thumbs/IMG_6787.jpg"
+	linkURL="images/IMG_6787.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6787]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6792.jpg"
+	thumbURL="thumbs/IMG_6792.jpg"
+	linkURL="images/IMG_6792.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6792]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6800.jpg"
+	thumbURL="thumbs/IMG_6800.jpg"
+	linkURL="images/IMG_6800.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6800]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6802.jpg"
+	thumbURL="thumbs/IMG_6802.jpg"
+	linkURL="images/IMG_6802.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6802]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6808.jpg"
+	thumbURL="thumbs/IMG_6808.jpg"
+	linkURL="images/IMG_6808.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6808]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6812.jpg"
+	thumbURL="thumbs/IMG_6812.jpg"
+	linkURL="images/IMG_6812.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6812]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6815.jpg"
+	thumbURL="thumbs/IMG_6815.jpg"
+	linkURL="images/IMG_6815.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6815]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6820.jpg"
+	thumbURL="thumbs/IMG_6820.jpg"
+	linkURL="images/IMG_6820.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6820]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6824.jpg"
+	thumbURL="thumbs/IMG_6824.jpg"
+	linkURL="images/IMG_6824.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6824]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6826.jpg"
+	thumbURL="thumbs/IMG_6826.jpg"
+	linkURL="images/IMG_6826.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6826]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6830.jpg"
+	thumbURL="thumbs/IMG_6830.jpg"
+	linkURL="images/IMG_6830.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6830]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6832.jpg"
+	thumbURL="thumbs/IMG_6832.jpg"
+	linkURL="images/IMG_6832.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6832]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6837.jpg"
+	thumbURL="thumbs/IMG_6837.jpg"
+	linkURL="images/IMG_6837.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6837]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6840.jpg"
+	thumbURL="thumbs/IMG_6840.jpg"
+	linkURL="images/IMG_6840.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6840]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6847.jpg"
+	thumbURL="thumbs/IMG_6847.jpg"
+	linkURL="images/IMG_6847.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6847]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6849.jpg"
+	thumbURL="thumbs/IMG_6849.jpg"
+	linkURL="images/IMG_6849.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6849]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6851.jpg"
+	thumbURL="thumbs/IMG_6851.jpg"
+	linkURL="images/IMG_6851.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6851]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6859.jpg"
+	thumbURL="thumbs/IMG_6859.jpg"
+	linkURL="images/IMG_6859.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6859]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6862.jpg"
+	thumbURL="thumbs/IMG_6862.jpg"
+	linkURL="images/IMG_6862.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6862]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6865.jpg"
+	thumbURL="thumbs/IMG_6865.jpg"
+	linkURL="images/IMG_6865.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6865]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6868.jpg"
+	thumbURL="thumbs/IMG_6868.jpg"
+	linkURL="images/IMG_6868.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6868]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_6870.jpg"
+	thumbURL="thumbs/IMG_6870.jpg"
+	linkURL="images/IMG_6870.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[IMG_6870]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/photo 1.jpg"
+	thumbURL="thumbs/photo 1.jpg"
+	linkURL="images/photo 1.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[photo 1]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/photo 4.jpg"
+	thumbURL="thumbs/photo 4.jpg"
+	linkURL="images/photo 4.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[photo 4]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/photo 5.jpg"
+	thumbURL="thumbs/photo 5.jpg"
+	linkURL="images/photo 5.jpg"
+	linkTarget="_blank">
+    <title><![CDATA[photo 5]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+</juiceboxgallery>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -39,22 +39,23 @@
     <div class="container">
       
       <header id="header">
-        <p class="large black center" id="logo">I'm Qing <span id="qing">/'tʃiŋ/</span>. Welcome.</p>
+        <p class="path">
+          <a href="home.html" class="pic-link"><img class="pic-next-text" src="static/imgs/icons/metroicons/back.png" alt /></a>
+          /<a href="home.html">Home</a>/<a href="gallery.html">My gallery</a>
+        </p>
       </header>
 	  <div id="main">
-	    <ul id="category">
-	  	  <li id="about-me"><a href="about.html">About me</a></li>
-	  	  <li id="my-blogs"><a href="#">My blogs</a></li>
-	  	  <li id="my-projects"><a href="#">My projects</a></li>
-	  	  <li id="my-gallery"><a href="gallery.html">My gallery</a></li>
-	    </ul>
-	    
-	    <ul id="social">
-	    	<li id="linkedin"><a class="pic-link" href="http://www.linkedin.com/in/yuqingzhang" target="_blank"><img src="static/imgs/icons/linkedin.png" alt></a></li>
-	    	<li id="stackflow"><a class="pic-link" href="http://stackoverflow.com/users/150324/zyq" target="_blank"><img src="static/imgs/icons/stackoverflow.png" alt></a></li>
-	    	<li id="facebook"><a class="pic-link" href="http://www.facebook.com/yuqing.zhang" target="_blank"><img src="static/imgs/icons/facebook.png" alt></a></li>
-	    	<li id="weibo"><a class="pic-link" href="http://www.weibo.com/yuqingzhang" target="_blank"><img src="static/imgs/icons/weibo.png" alt></a></li>
-	    </ul>
+	    <ul class="albumn-cover">
+		  <li>
+		    <a href="gallery/2012-05-stavanger-norway/2012-05-stavanger-norway.html" title="Stavanger, Norway"> <p class="thumb"><img src="gallery/2012-05-stavanger-norway/images/IMG_7701.jpg" alt="Stavanger, Norway"></p> <p>Stavanger, Norway May 2012</p></a>
+		  </li>
+		  <li>
+		    <a href="gallery/2011-09-edinburgh-scotland/2011-09-edinburgh-scotland.html" title="Edinburgh, Scotland"> <p class="thumb"><img src="gallery/2011-09-edinburgh-scotland/images/IMG_6859.jpg" alt="Edinburgh, Scotland"></p> <p>Edinburgh, Scotland Sep. 2011</p></a>
+		  </li>
+		  <li>
+		    <a href="gallery/2011-09-highlands-scotland/2011-09-highlands-scotland.html" title="Highlands, Scotland"> <p class="thumb"><img src="gallery/2011-09-highlands-scotland/images/IMG_7045.jpg" alt="Highlands, Scotland"></p> <p>Highlands, Scotland Sep. 2012</p></a>
+		  </li>
+		</ul>
 	  </div>
 
       <footer>
@@ -69,7 +70,7 @@
     <script src="static/scripts/bootstraper/bootstrap.min.js"></script>
     <script>
         $(function () {
-        	$('#foot-text').append('&copy; ' + new Date().getFullYear());
+            $('#foot-text').append('&copy; ' + new Date().getFullYear());
         });
     </script>
 </body>
