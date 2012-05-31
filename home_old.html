@@ -54,13 +54,13 @@
             if (protocol == 'file:') {
                 startIndex = 1;
             }
-            return protocol + '//' + pathname.substring(startIndex, pathname.lastIndexOf('/') + 1) + 'Content/Stream.json';
+            return protocol + '///' + pathname.substring(startIndex, pathname.lastIndexOf('/') + 1) + 'Content/Stream.json';
         }
 
         $(function () {
             $.ajax({
-                //url: getStreamJsonUrl(),
-                url: 'http://zhangyuqinglabs.blob.core.windows.net/qswareportal/Content/Stream.json',
+                url: getStreamJsonUrl(),
+                //url: 'http://zhangyuqinglabs.blob.core.windows.net/qswareportal/Content/Stream.json',
                 dataType: 'jsonp',
                 jsonpCallback: 'dataCallback',
                 success: function (data) {

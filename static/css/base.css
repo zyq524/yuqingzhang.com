@@ -47,6 +47,17 @@ a:hover {
     margin: 0 7px;
 }
 
+.container #projects li {
+	display: list-item;
+	margin-left: 3.5%;
+	margin-right: 3.5%;
+	margin-bottom: 1.75em;
+	clear: none;
+}
+
+.container #projects .project-description {
+	font-size: 14px;
+}
 .container #category1 a {
 	color: #383838;
 }
