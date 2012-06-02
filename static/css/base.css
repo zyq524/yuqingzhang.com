@@ -85,13 +85,13 @@ a:hover {
     padding-right: 10px;
 }
 
-ul.albumn-cover {
+ul#albumns {
 	overflow: hidden;
     margin-left: 2.5%;
     margin-right: 2.5%;
 }
 
-ul.albumn-cover {
+ul#albumns {
 	display: block;
 	list-style-type: disc;
 	-webkit-margin-before: 1em;
@@ -101,12 +101,11 @@ ul.albumn-cover {
 	-webkit-padding-start: 40px;
 }
 
-@media only screen and (min-width: 768px)
-ul.albumn-cover li:nth-child(3n+1) {
+ul#albumns li:nth-child(3n+1) {
 	clear: left;
 }
 
-ul.albumn-cover li {
+ul#albumns li {
 	margin-left: 2.5%;
 	margin-right: 2.5%;
 	margin-bottom: 1.75em;
@@ -116,7 +115,7 @@ ul.albumn-cover li {
 	clear: none;
 }
 
-ul.albumn-cover p.thumb {
+ul#albumns p.thumb {
 	float: none;
 	width: auto;
 	margin-right: 0;
@@ -124,7 +123,7 @@ ul.albumn-cover p.thumb {
 	margin-left: 0;
 }
 
-ul.albumn-cover li p.thumb img {
+ul#albumns li p.thumb img {
 	padding: 0.625em;
 	background: white;
 	border: 1px solid #E5E5E5;

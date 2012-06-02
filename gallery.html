@@ -45,16 +45,7 @@
         </p>
       </header>
 	  <div id="main">
-	    <ul class="albumn-cover">
-		  <li>
-		    <a href="gallery/2012-05-stavanger-norway/2012-05-stavanger-norway.html" title="Stavanger, Norway"> <p class="thumb"><img src="gallery/2012-05-stavanger-norway/images/IMG_7701.jpg" alt="Stavanger, Norway"></p> <p>Stavanger, Norway May 2012</p></a>
-		  </li>
-		  <li>
-		    <a href="gallery/2011-09-edinburgh-scotland/2011-09-edinburgh-scotland.html" title="Edinburgh, Scotland"> <p class="thumb"><img src="gallery/2011-09-edinburgh-scotland/images/IMG_6859.jpg" alt="Edinburgh, Scotland"></p> <p>Edinburgh, Scotland Sep. 2011</p></a>
-		  </li>
-		  <li>
-		    <a href="gallery/2011-09-highlands-scotland/2011-09-highlands-scotland.html" title="Highlands, Scotland"> <p class="thumb"><img src="gallery/2011-09-highlands-scotland/images/IMG_7045.jpg" alt="Highlands, Scotland"></p> <p>Highlands, Scotland Sep. 2012</p></a>
-		  </li>
+	    <ul id="albumns">
 		</ul>
 	  </div>
 
@@ -66,8 +57,17 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="static/scripts/json2.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="static/scripts/bootstraper/bootstrap.min.js"></script>
+    <script src="static/scripts/underscore-min.js"></script>
+    <script src="static/scripts/backbone.js"></script>
 	<script src="static/scripts/base.js"></script>
+    <script src="static/scripts/gallery.js"></script>
+
+     <!-- Templates -->
+    <script type="text/template" id="albumn-template">
+        <a href="<%= albumnUrl %>" title="<%= title %>"> <p class="thumb"><img src="<%= thumbImg %>" alt="<%= title %>"></p> <p><%= comment %></p></a>
+    </script>
 </body>
 </html>
