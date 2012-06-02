@@ -46,14 +46,6 @@
       </header>
 	  <div id="main">
 	  	<ul id="projects">
-	  	  <li>
-	  	  	<a href="http://wecancarpool.com" target="_blank">WeCanCarpool</a>
-	  	  	<span class="project-description"> is a platform to make it easy for anybody to organize a carpool or find one of the already carpools, which was inspired by the young people standing down the street in front of my apartment and looking for a lift. </span>
-	  	  </li>
-	  	  <li>
-	  	  	<a href="http://wecancarpool.com" target="_blank">WeCanCarpool</a>
-	  	  	<span class="project-description"> is a platform to make it easy for anybody to organize a carpool or find one of the already carpools, which was inspired by the young people standing down the street in front of my apartment and looking for a lift. </span>
-	  	  </li>
 	  	</ul>
 	  </div>
 
@@ -65,11 +57,18 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="static/scripts/json2.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="static/scripts/bootstraper/bootstrap.min.js"></script>
+    <script src="static/scripts/underscore-min.js"></script>
+    <script src="static/scripts/backbone.js"></script>
 	<script src="static/scripts/base.js"></script>
-	<script>
-		
-	</script>
+    <script src="static/scripts/projects.js"></script>
+
+     <!-- Templates -->
+    <script type="text/template" id="project-template">
+	    <a href="<%= url %>" target="_blank"><%= name %></a>
+	    <span class="project-description"><%= description %></span>
+    </script>
 </body>
 </html>

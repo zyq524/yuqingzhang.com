@@ -59,8 +59,8 @@
 
         $(function () {
             $.ajax({
-                url: getStreamJsonUrl(),
-                //url: 'http://zhangyuqinglabs.blob.core.windows.net/qswareportal/Content/Stream.json',
+                //url: getStreamJsonUrl(),
+                url: 'http://zhangyuqinglabs.blob.core.windows.net/qswareportal/Content/Stream.json',
                 dataType: 'jsonp',
                 jsonpCallback: 'dataCallback',
                 success: function (data) {
