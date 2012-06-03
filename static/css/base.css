@@ -16,11 +16,9 @@ a:hover {
     text-decoration: none;
 }
 
-.container #header{
-	padding-bottom: 30px;
-}
 .container #logo {
-	padding-top: 110px;
+	padding-top: 150px;
+	padding-bottom: 30px;
 	font-size: 39px;
 	color: black;
 	text-align: center;
@@ -33,11 +31,11 @@ a:hover {
 .container #main {
     font-size: 16px;
 	line-height: 23px;
-	min-height: 400px;
+	min-height: 500px;
+	padding-top: 80px;
 }
 
 .container #category {
-	padding-top: 80px;
 	padding-right: 30px;
 	text-align: center;
 }
@@ -58,9 +56,6 @@ a:hover {
 .container #projects .project-description {
 	font-size: 14px;
 }
-.container #category1 a {
-	color: #383838;
-}
 
 .container #social {
 	padding-top: 50px;
@@ -69,12 +64,16 @@ a:hover {
 }
 
 .container #foot-text {
+    padding-top:30px;
 	text-align: center;
 }
 
 .container .path {
     font-size: 16px;
     color: #CCC;
+    background-color: White;
+    position: fixed;
+    width: 100%;
 }
 
 .container .pic-link {
