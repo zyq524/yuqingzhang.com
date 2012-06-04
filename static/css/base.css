@@ -31,7 +31,14 @@ a:hover {
 .container #main {
     font-size: 16px;
 	line-height: 23px;
-	min-height: 500px;
+	min-height: 400px;
+	padding-top: 80px;
+}
+
+.container #home-main {
+    font-size: 16px;
+	line-height: 23px;
+	min-height: 300px;
 	padding-top: 80px;
 }
 
