@@ -5,16 +5,11 @@ body, p {
 	font-family: "Open Sans", sans-serif;
 }
 
-<<<<<<< HEAD
 p {
     margin: 0 0 13px;
 }
 
-=======
-.container {
-	top: 0;
-}
->>>>>>> Moved google font link to css
+
 a {
 	color: #999;
     text-decoration: none;
