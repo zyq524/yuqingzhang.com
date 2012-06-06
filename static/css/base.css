@@ -2,6 +2,10 @@ body, p {
 	font-family: "Open Sans", sans-serif;
 }
 
+p {
+    margin: 0 0 13px;
+}
+
 a {
 	color: #999;
     text-decoration: none;
@@ -16,6 +20,28 @@ a:hover {
     text-decoration: none;
 }
 
+
+.path {
+    font-size: 16px;
+    color: #CCC;
+    background-color: White;
+    padding-top: 60px;
+    width: 1170px;
+}
+
+.path .pic-link {
+    border-bottom: none;
+}
+
+.path .pic-next-text {
+    padding-right: 10px;
+}
+
+#top-fixed {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .container #logo {
 	padding-top: 150px;
 	padding-bottom: 30px;
@@ -75,22 +101,6 @@ a:hover {
 	text-align: center;
 }
 
-.container .path {
-    font-size: 16px;
-    color: #CCC;
-    background-color: White;
-    position: fixed;
-    width: 100%;
-}
-
-.container .pic-link {
-    border-bottom: none;
-}
-
-.container .pic-next-text {
-    padding-right: 10px;
-}
-
 ul#albumns {
 	overflow: hidden;
     margin-left: 2.5%;
@@ -141,4 +151,9 @@ ul#albumns li p.thumb img {
 	-o-transition: opacity 0.5s ease;
 	transition: opacity 0.5s ease;
 	border-radius: 0.25em;
+}
+
+.container .post {
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 10px;
 }
