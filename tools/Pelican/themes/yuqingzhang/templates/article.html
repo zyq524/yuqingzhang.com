@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section id="main" class="post-body">  
+<div class="row-fluid">      
+<div class="span8">   
+        <header> <h1 class="entry-title">{{ article.title }}</h1> </header>
+        <footer class="post-info">
+                <abbr class="published" title="{{ article.date.isoformat() }}">
+                        {{ article.locale_date }}
+                </abbr>
+        </footer><!-- /.post-info -->
+        <div class="entry-content">
+        {{ article.content }}
+        </div><!-- /.entry-content -->
+
+</div>
+</div>
+</section>
+{% endblock %}

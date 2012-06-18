@@ -17,3 +17,18 @@ gallery/2011-09-highlands-scotland/images/*.jpg
 
 output/
 
+src/juicebox/
+
+src/main/posts/
+
+*.pyc
+
+*.pyproj
+
+*.sln
+
+*.suo
+
+.pydevproject
+
+.project

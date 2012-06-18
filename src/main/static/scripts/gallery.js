@@ -24,7 +24,7 @@
             return response;
         },
         url: function () {
-            return 'http://zhangyuqinglabs.blob.core.windows.net/qswareportal/gallery.json';
+            return 'http://zhangyuqinglabs.blob.core.windows.net/site/content/gallery.json';
         }
     });
 

@@ -78,6 +78,7 @@ a:hover {
 
 .container li {
     display: inline;
+    line-height: 20px;
 }
 
 .container #projects li {

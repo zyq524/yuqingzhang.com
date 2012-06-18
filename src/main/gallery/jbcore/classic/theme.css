@@ -1,0 +1,594 @@
+/**
+ * Juicebox 1.0.2 Classic Theme
+ *
+ * Copyright (c) 2012 Juicebox Inc. All rights reserved.
+ * http://www.juicebox.net
+ *
+ * BY USING THIS SOFTWARE, YOU AGREE TO THE JUICEBOX TERMS OF USE
+ * http://www.juicebox.net/terms
+ *
+ * Support and Documentation: http://www.juicebox.net/support
+ *
+ * Build Time: 05/10/2012 09:27:58 AM
+ */
+
+.juicebox-gallery {
+	outline: none;
+}
+.juicebox-gallery table, .juicebox-gallery tr, .juicebox-gallery td, .juicebox-gallery tbody{
+	border-spacing: 0;
+	padding: 0 !important;
+	margin: 0 !important;
+	border: none 0 !important;
+	background: none repeat scroll 0 0 transparent;
+	width: 100%;
+	height: 100%;
+}
+
+.juicebox-gallery .jb-area-caption table,
+.juicebox-gallery .jb-area-caption tr,
+.juicebox-gallery .jb-area-caption td,
+.juicebox-gallery .jb-area-caption tbody
+{
+	vertical-align: bottom;
+}
+
+.juicebox-gallery .jb-panel-detail table,
+.juicebox-gallery .jb-panel-detail tr,
+.juicebox-gallery .jb-panel-detail td,
+.juicebox-gallery .jb-panel-detail tbody
+{
+	vertical-align: middle;
+}
+
+.juicebox-gallery li {
+	list-style: none
+}
+
+.juicebox-gallery p {
+	width: auto;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
+
+/* gallery top panel */
+.jb-panel-top
+{
+	background: transparent;
+}
+.jb-flag-msie-bf9 .jb-panel-top
+{
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	background-color:Black;
+}
+
+/* gallery index panel */
+.jb-panel-index
+{
+	height:100%;	/* for gallery preloader */
+	width:100%;
+}
+
+.jb-idx-thb-container {
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: bottom;
+	position: absolute
+}
+.jb-flag-large-screen-mode .jb-idx-thb-container {
+	height: auto;
+}
+.jb-idx-thb-list {
+	margin: 5px;
+	background-color: Transparent;
+}
+.jb-idx-thb-list .jb-idx-thumb {
+	float: left;
+	background-color: transparent;
+	position: relative;
+}
+.jb-idx-thb-list .jb-idx-thumb img {
+	border: 0px solid transparent;
+	cursor: pointer;
+}
+.jb-idx-thb-list .jb-idx-thumb img:active {
+	-webkit-transform: translate(2px,2px);
+	-moz-transform: translate(2px,2px);
+	-o-transform: translate(2px,2px);
+}
+.jb-idx-thumb {
+	background: transparent;
+}
+.jb-idx-thb-frame {
+	border: 0px solid transparent;
+	cursor: pointer;
+}
+.jb-idx-thb-frame:hover {
+	border-color: rgb(255, 255, 255);
+	border-color: rgba(255, 255, 255, .5);
+	border-style: solid;
+}
+.jb-flag-large-screen-mode .jb-thm-thumb-selected .jb-idx-thb-frame {
+	border-color: rgb(255, 255, 255);
+	border-color: rgba(255, 255, 255, .5);
+	border-style: solid;
+}
+.jb-flag-msie .jb-idx-thb-frame {	/* the frame around thumbnail won't work correctly on IE without this */
+	background: url('img/assets.png') no-repeat -454px -61px;
+}
+.jb-idx-thb-list-page-number {
+	font-size: 0.8em;
+}
+
+/* gallery detail panel */
+.jb-panel-detail {
+	overflow: hidden;
+}
+.jb-dt-main-frame {
+	position: absolute;
+	vertical-align: middle;
+	float: left;
+	text-align: center;
+	overflow: hidden;
+}
+.jb-dt-main-frame .jb-dt-main-image {
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+	border-color: White;
+}
+.jb-dt-main-frame img
+{
+	max-width: none;
+}
+.jb-flag-msie .jb-panel-detail {
+	position: relative;
+}
+.jb-watermark, .jb-watermark a, .jb-watermark img, .jb-watermark a:visited, .jb-watermark a:active, .jb-watermark a:link, .jb-watermark a:hover
+{
+	border:none 0 transparent;
+	outline: none;
+}
+
+/* gallery caption area */
+.jb-area-caption
+{
+	vertical-align: bottom;
+}
+
+.jb-cap-frame {
+	float: left;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: absolute;
+}
+.jb-cap-frame tr {
+	vertical-align: bottom;
+}
+.jb-flag-size-fixed .jb-cap-frame tr {
+	vertical-align: top;
+}
+.jb-cap-frame .jb-caption {
+	background-color: rgba(0, 0, 0, .5);
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+.jb-cap-frame .jbac-number {
+	float: right;
+	color: #ccc;
+	width: 72px;
+	text-align: right;
+	font-size: 0.8em;
+}
+.jb-caption .jb-caption-title {
+	font-size: 1em;
+}
+
+.jb-caption p {
+	font-size: 0.8em;
+	line-height: 1.4em;
+}
+.jb-caption a {
+	color: white;
+}
+.jb-flag-msie-bf9 .jb-cap-frame .jb-caption {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	background-color:Black;
+}
+p.jb-cap-content {
+	margin: 0;
+	padding: 0;
+}
+.jb-flag-size-fixed .jb-caption
+{
+	height:100%;
+}
+
+/* gallery title area */
+.jb-flag-large-screen-mode .jb-area-large-mode-title {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	padding: 5px 10px 5px 10px;
+	color: black;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5), 0 0 5px rgba(0,0,0,0.2);
+	font-size: 1.1em;
+}
+
+/* gallery button bar */
+.jb-classifier-link-wrapper {
+	display: none;
+	position: absolute;
+	right: 10px;
+	top: 7px;
+}
+.jb-bb-bar {
+	float: left;
+	height: 38px;
+	background-color: rgba(0, 0, 0, .5);
+	padding: 0 4px 0 4px;
+	margin: 0;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/*BUTTONS*/
+.jb-bb-button {
+	float: left;
+	background: url(img/assets.png) no-repeat;
+	cursor: pointer;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	font-size: 0.8em;
+	height: 38px;
+	width: 38px;
+}
+.jb-flag-msie-bf9 .jb-bb-button {
+	margin: 0 0 0 0;
+}
+
+.jb-flag-msie-bf9 .jb-bb-bar {
+	float: right;
+	padding: 0 0 0 0;
+	height: 38px;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	background-color:Black;
+}
+.jb-bb-button.jb-bb-btn-full-screen {
+	background-position: 0 0;
+}
+.jb-bb-button.jb-bb-btn-full-screen.jb-bb-btn-de-full-screen
+{
+	background-position: 0 -50px;
+}
+
+/* gallery button bar on index page*/
+
+div.jb-classifier-link-wrapper.jb-classifier-thumb-area {
+	width: 50px
+}
+
+/* gallery button bar on detail page*/
+.jb-bb-button.jb-bb-btn-de-show-list {
+	background-position: -50px 0;
+}
+.jb-flag-large-screen-mode .jb-bb-button.jb-bb-btn-de-show-list {
+	background-position: -50px -50px;
+}
+.jb-bb-button.jb-bb-btn-open-url {
+	background-position: -300px 0;
+}
+.jb-bb-button.jb-bb-btn-auto-play {
+	background-position: -100px 0;
+}
+.jb-bb-button.jb-bb-btn-auto-play.jb-status-playing {
+	background-position: -100px -50px;
+}
+.jb-bb-button.jb-bb-btn-audio {
+	background-position: -150px 0;
+}
+.jb-bb-button.jb-bb-btn-audio.jb-status-playing {
+	background-position: -150px -50px;
+}
+.jb-bb-button.jb-bb-btn-show-info {
+	background-position: -250px 0;
+}
+.jb-bb-button.jb-bb-btn-top-nav.jb-bb-btn-top-nav-left {
+	background: url('img/assets.png') no-repeat -200px -50px;
+}
+.jb-bb-button.jb-bb-btn-top-nav.jb-bb-btn-top-nav-right {
+	background: url('img/assets.png') no-repeat -200px 0;
+}
+.jb-flag-large-screen-mode .jb-navigation .jbn-left-button {
+	background: url('img/assets.png') no-repeat 5px -97px;
+	width: 49px;
+}
+.jb-bb-splitter
+{
+	border-color: White;
+	display: block;
+	height: 20px;
+	border-style: none solid none none;
+	border-width: 1px;
+	float: left;
+	margin: 10px 0 0 3px;
+}
+
+/* gallery navigation */
+.jb-navigation {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.jb-navigation .jbn-nav-button
+{
+	width: 49px;
+	height: 49px;
+	margin:0;
+	padding:0;
+}
+.jb-navigation .jbn-left-button {
+	display: none;
+	background: url('img/assets.png') no-repeat 3px -97px;
+	width: 49px;
+	height: 49px;
+	padding: 2px;
+	margin-left: 10px;
+	position: absolute;
+}
+.jb-flag-large-screen-mode .jb-navigation .jbn-right-button {
+	background: url('img/assets.png') no-repeat -47px -97px;
+	width: 49px;
+}
+.jb-navigation .jbn-right-button {
+	display: none;
+	background: url('img/assets.png') no-repeat -47px -97px;
+	width: 49px;
+	height: 49px;
+	padding: 2px;
+	margin-right: 10px;
+	position: absolute;
+}
+.jb-navigation .jbn-nav-left-button {
+	color: blue;
+	width: 50%
+}
+.jb-navigation .jbn-nav-right-button {
+	color: blue;
+	width: 50%;
+}
+.jb-navigation .jbn-left-button, .jb-navigation .jbn-right-button {
+	cursor: pointer;
+}
+.jb-navigation .jbn-left-button:active, .jb-navigation .jbn-right-button:active {
+	-webkit-transform: translate(2px,2px);
+	-moz-transform: translate(2px,2px);
+	-o-transform: translate(2px,2px);
+}
+
+/* gallery navigation for index */
+
+.jb-thm-thumb-dot .jb-thm-thumb-image {
+	margin: 0;
+	padding: 0;
+	display: block;
+	background: transparent url(img/assets.png) no-repeat -200px -100px;
+	cursor: pointer;
+}
+.jb-thm-thumb-dot .jb-thm-thumb-image:hover {
+	background: transparent url(img/assets.png) no-repeat -150px -100px;
+}
+.jb-thm-thumb-selected div.jb-thm-thumb-image, .jb-thm-thumb-selected div.jb-thm-thumb-image:hover {
+	background: transparent url(img/assets.png) no-repeat -100px -100px;
+}
+.jb-idx-thb-list div.jb-thm-thumb-dot {
+	margin: 0;
+	padding: 0;
+}
+
+/* gallery navigation for detail */
+.jb-navigation .jbn-nav-touch-area {
+	display: inline-block;
+	height: 100%;
+	width: 50%;
+	position: relative;
+	cursor: pointer;
+}
+.jb-flag-msiever7 .jb-navigation .jbn-nav-touch-area
+{
+	width: 49.99%;
+}
+
+.jb-navigation .dt-nav-disabled {
+	cursor: default !important;
+}
+.jb-flag-msie .jbn-nav-touch-area {	/* this will make the jbn-nav-touch-area clickable on IE */
+	background: url('img/assets.png') no-repeat -454px -61px;
+}
+.jb-flag-msie .jb-navigation .jbn-nav-touch-area {
+	display: block;
+	float: left;
+}
+
+/* gallery go back button */
+.jb-go-back
+{
+	padding: 5px 10px;
+	margin: 0;
+}
+.jb-go-back a {
+	text-decoration: none;
+}
+
+/* gallery splash page */
+.jb-splash-info
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: auto;
+	width:100%;
+}
+.jb-splash-info p {
+	color: white;
+	font-size: 1em;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+	line-height: 1.5em;
+	width:auto;
+}
+/* Splash page description*/
+p.jb-splash-desc
+{
+	width:auto;
+	padding: 0 20px 20px 20px;
+}
+/* Splash page photo count*/
+p.jb-splash-cnt
+{
+	padding: 0 20px 20px 20px;
+	font-weight: bold;
+}
+/* Splash page title*/
+.jb-splash-info h3 {
+	color: white;
+	padding: 20px;
+	margin: 0;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+	font-size: 2.2em;
+}
+/* Splash 'View Gallery' Text*/
+.jb-splash-view-glry {
+	color: White;
+	font-size: 1.3em;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-decoration: none;
+	display: block;
+	width: auto;
+	margin: 0;
+	padding: 0 20px 20px 20px;
+}
+.jb-splash
+{
+	height: 100%;
+	width: 100%;
+	position:relative;
+	margin:0;
+	padding:0;
+}
+.jb-splash-holder
+{
+	position:relative;
+}
+.jb-splash-background
+{
+	background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* gallery messages */
+.jb-error-message {
+	color: White;
+	padding: 8px 10px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1em;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5), 0 0 5px rgba(0,0,0,0.2);
+	text-align:center;
+}
+
+.jb-error-message a{
+	color: White;
+}
+
+/* Autoplay message */
+.juicebox-gallery  .jb-status-message{
+	color: White;
+	padding: 8px 10px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1em;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5), 0 0 5px rgba(0,0,0,0.2);
+	font-weight: bold;
+	text-align:center;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background-color: rgba(0, 0, 0, .5);
+
+}
+
+/* gallery flag */
+.jb-flag-size-fixed
+{
+	overflow:hidden;
+}
+
+/* gallery status */
+.jb-status-thumb-loading
+{
+	background-color:rgba(0,0,0,0.5);
+	height: 90%;
+	width: 90%;
+	margin: 5%;
+}
+.jb-flag-msie-bf9 .jb-status-thumb-loading
+{
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	background-color:Black;
+}
+.jb-status-loading {
+	background: url('img/spinner.gif') no-repeat center;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center
+}
+.jb-badge
+{
+	background: url('img/jb001.png') no-repeat center;
+}
+.jcbx-glry-classic {
+	background: #222222;
+	color: white;
+	clear: both;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	height: 500px;
+	color: #FFF;
+	position: relative;
+	overflow: hidden;
+	display:block !important;
+}
+
+.jcbx-glry-classic a{
+	color:#FFF;
+}
+.jcbx-glry-classic:hover .button_bar {
+}
+.jcbx-glry-classic:hover .navigation {
+}
+.jcbx-glry-classic .jb-idx-thb-list .jb-idx-thumb img {
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+	box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+	/* For IE 8
+	 -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#000000')";
+	 / For IE 5.5 - 7 /
+	 filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=270, Color='#000000');
+	 */
+}
+.jb-idx-title {
+	font-size: 1.1em;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5), 0 0 5px rgba(0,0,0,0.2);
+}
+.jb-idx-thb-list-page-number {
+}

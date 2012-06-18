@@ -23,7 +23,7 @@
             return response;
         },
         url: function () {
-            return 'http://zhangyuqinglabs.blob.core.windows.net/qswareportal/projects.json';
+            return 'http://zhangyuqinglabs.blob.core.windows.net/site/content/projects.json';
         }
     });
 

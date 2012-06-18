@@ -1,5 +1,5 @@
 albumns([
-{"albumnUrl":"gallery/2012-05-stavanger-norway/2012-05-stavanger-norway.html","title":"Stavanger, Norway",thumbImg:"gallery/2012-05-stavanger-norway/images/IMG_7701.jpg",comment:"Stavanger, Norway May 2012"},
-{"albumnUrl":"gallery/2011-09-edinburgh-scotland/2011-09-edinburgh-scotland.html","title":"Edinburgh, Scotland",thumbImg:"gallery/2011-09-edinburgh-scotland/images/IMG_6859.jpg",comment:"Edinburgh, Scotland Sep. 2011"},
-{"albumnUrl":"gallery/2011-09-highlands-scotland/2011-09-highlands-scotland.html","title":"Highlands, Scotland",thumbImg:"gallery/2011-09-highlands-scotland/images/IMG_7045.jpg",comment:"Highlands, Scotland Sep. 2011"}
+{"albumnUrl":"gallery/2012-05-stavanger-norway/2012-05-stavanger-norway","title":"Stavanger, Norway",thumbImg:"http://zhangyuqinglabs.blob.core.windows.net/gallery/2012-05-stavanger-norway/images/img_7701.jpg",comment:"Stavanger, Norway May 2012"},
+{"albumnUrl":"gallery/2011-09-edinburgh-scotland/2011-09-edinburgh-scotland","title":"Edinburgh, Scotland",thumbImg:"http://zhangyuqinglabs.blob.core.windows.net/gallery/2011-09-edinburgh-scotland/images/img_6859.jpg",comment:"Edinburgh, Scotland Sep. 2011"},
+{"albumnUrl":"gallery/2011-09-highlands-scotland/2011-09-highlands-scotland","title":"Highlands, Scotland",thumbImg:"http://zhangyuqinglabs.blob.core.windows.net/gallery/2011-09-highlands-scotland/images/img_7045.jpg",comment:"Highlands, Scotland Sep. 2011"}
 ])
