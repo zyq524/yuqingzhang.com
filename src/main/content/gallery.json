@@ -1,5 +1,6 @@
 albumns([
 {"albumnUrl":"gallery/2012-05-stavanger-norway/2012-05-stavanger-norway","title":"Stavanger, Norway",thumbImg:"http://zhangyuqinglabs.blob.core.windows.net/gallery/2012-05-stavanger-norway/images/img_7701.jpg",comment:"Stavanger, Norway May 2012"},
 {"albumnUrl":"gallery/2011-09-edinburgh-scotland/2011-09-edinburgh-scotland","title":"Edinburgh, Scotland",thumbImg:"http://zhangyuqinglabs.blob.core.windows.net/gallery/2011-09-edinburgh-scotland/images/img_6859.jpg",comment:"Edinburgh, Scotland Sep. 2011"},
-{"albumnUrl":"gallery/2011-09-highlands-scotland/2011-09-highlands-scotland","title":"Highlands, Scotland",thumbImg:"http://zhangyuqinglabs.blob.core.windows.net/gallery/2011-09-highlands-scotland/images/img_7045.jpg",comment:"Highlands, Scotland Sep. 2011"}
+{"albumnUrl":"gallery/2011-09-highlands-scotland/2011-09-highlands-scotland","title":"Highlands, Scotland",thumbImg:"http://zhangyuqinglabs.blob.core.windows.net/gallery/2011-09-highlands-scotland/images/img_7045.jpg",comment:"Highlands, Scotland Sep. 2011"},
+{"albumnUrl":"gallery/2011-09-london-england/2011-09-london-england","title":"London, England",thumbImg:"http://zhangyuqinglabs.blob.core.windows.net/gallery/2011-09-london-england/images/img_7223.jpg",comment:"London, England Sep. 2011"}
 ])
