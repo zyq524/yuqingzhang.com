@@ -27,8 +27,7 @@ def main():
     
     print 'Pelican Processed...'
 
-    stb = SitesToAzureBlob('../src/main', '../output', overwrite_output = False, account_name = 'zhangyuqinglabs', account_key = 'aQLXzo4soX+dK1TYqTeG9dxkdgGpDi8dEbODL8uha5P3bG1WvuczRJDpopO1JKLba6Y9AqX0yEwq/s8Zbo+60Q==',
-                         container_name = 'site')
+    stb = SitesToAzureBlob('../src/main', '../output', overwrite_output = False)
     stb.upload_files_to_blob()
 
 if __name__ == "__main__":
