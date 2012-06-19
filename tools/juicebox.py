@@ -3,7 +3,7 @@ from xml.dom.minidom import parse
 import os
 
 def upload_images(account_name, account_key):
-    stb = SitesToAzureBlob('../gallery/', 
+    stb = SitesToAzureBlob('../src/juicebox/', 
                            '../output/gallery/', overwrite_output = False,
                            account_name = account_name, account_key = account_key,
                            container_name = 'gallery')

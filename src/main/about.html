@@ -44,18 +44,21 @@
     <div class="container">
 
 	  <div id="main">
-	  	<div id='profile'>
-		  	<p>Hi, I'm YuQing Zhang, you can call me Qing /tʃiŋ/.</p> 
-		  	<p>I am an IT consultant, a software developer.</p>
-		  	<p>Currently I am living in Copenhagen, Denmark.</p>
-		  	<p>You can find more about me on </p>
-		  	<p><a href="http://www.linkedin.com/in/yuqingzhang" target="_blank">Linkedin</a>,
+	  	<div id='profile' class='span6'>
+		  	<p class='intro'>Hi, I'm YuQing Zhang, you can call me Qing /tʃiŋ/.</p> 
+		  	<p class='intro'>I am an IT consultant, a software developer.</p>
+		  	<p class='intro'>Currently I am living in Copenhagen, Denmark.</p>
+		  	<p class='intro'>You can find more about me on </p>
+		  	<p class='intro'><a href="http://www.linkedin.com/in/yuqingzhang" target="_blank">Linkedin</a>,
 		  		 <a href="https://github.com/zyq524" target="_blank">Github</a>, 
 		  		 <a href="http://stackoverflow.com/users/150324/zyq" target="_blank">StackOverflow</a>, 
 		  		 <a href="http://www.facebook.com/yuqing.zhang" target="_blank">Facebook</a>,
 		  		 <a href="http://www.weibo.com/yuqingzhang" target="_blank">Weibo</a> or 
-		  		 <a href='posts/index.html'>my blogs</a>
+		  		 <a href='http://yuqingzhang.com'>this site.</a>
 		 	</p>
+	  	</div>
+	  	<div id = 'profile-img' class='span4'>
+	  		<img src='static/imgs/profile.jpg' alt />
 	  	</div>
 	  </div>
 
@@ -70,5 +73,20 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="static/scripts/bootstraper/bootstrap.min.js"></script>
 	<script src="static/scripts/base.js"></script>
+
+	<script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-32780497-1']);
+	  _gaq.push(['_setDomainName', 'yuqingzhang.com']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
 </body>
 </html>

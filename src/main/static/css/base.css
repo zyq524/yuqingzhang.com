@@ -165,14 +165,15 @@ ul#albumns li p.thumb img {
 }
 
 .container #profile {
-	padding-left: 300px;
-	padding-top: 100px;
+	padding-left: 100px;
+	padding-top: 80px;
 }
 
-.container #profile p{
+.container #profile .intro{
 	font-size: 18px;
 	line-height: 21px;
 }
+
 /****************** Blog  ********************/
 .container .entry-title {
     padding-bottom: 9px;
