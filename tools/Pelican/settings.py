@@ -1,7 +1,7 @@
 import os
 
-AUTHOR = u'YuQing Zhang'
-SITENAME = u"YuQing Zhang's Blogs"
+AUTHOR = u'Qing'
+SITENAME = u"Qing's Blogs"
 SITEURL = 'http://www.yuqingzhang.com'
 TIMEZONE = "Europe/Copenhagen"
 
