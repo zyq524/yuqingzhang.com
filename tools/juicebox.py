@@ -20,6 +20,9 @@ def create_index_page(dst_folder, albumn_name, page_title):
     content = content +'''</title>
             <meta charset="utf-8" />
             <meta name="apple-mobile-web-app-capable" content="yes" />
+			<meta name="description" content="YuQing Zhang's footprints">
+			<meta name="keywords" content="YuQing Zhang, Yuqing Zhang, Qing Zhang, Qing">
+			<meta name="author" content="YuQing Zhang">
             <style type="text/css">
                 body {
                     margin: 0px;
