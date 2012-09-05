@@ -4,7 +4,7 @@ import os
 
 def upload_images(account_name, account_key):
     stb = SitesToAzureBlob('../src/juicebox/', 
-                           '../output/gallery/', overwrite_output = False,
+                           '../output/gallery', overwrite_output = False,
                            account_name = account_name, account_key = account_key,
                            container_name = 'gallery')
 
@@ -49,8 +49,8 @@ def create_index_page(dst_folder, albumn_name, page_title):
     f.write(content)
     f.close() 
     
-def update_config_xml(config_xml_path, gallery_name):
-    image_container = 'http://zhangyuqinglabs.blob.core.windows.net/gallery/'
+def update_config_xml(config_xml_path, image_container, gallery_name):
+    #image_container = 'http://zhangyuqinglabs.blob.core.windows.net/gallery/'
     dom = parse(os.path.abspath(config_xml_path))
     images = dom.getElementsByTagName('image')
     for image in images:
