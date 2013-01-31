@@ -3,16 +3,12 @@ from pelicantool import call_pelican
 from SitesToAzureBlob import SitesToAzureBlob
 
 def main(account_name = None, account_key = None, ):
-    #update_config_xml(r'..\src\main\gallery\2011-09-edinburgh-scotland\config.xml', '2011-09-edinburgh-scotland')
-    #update_config_xml(r'..\src\main\gallery\2011-09-highlands-scotland\config.xml', '2011-09-highlands-scotland')
-    #update_config_xml(r'..\src\main\gallery\2012-05-stavanger-norway\config.xml', '2012-05-stavanger-norway')
-    #update_config_xml(r'../src/main/gallery/2011-09-london-england/config.xml', '2011-09-london-england')
-    #update_config_xml(r'D:\Users\qizhang\Desktop\Reberbanegade\config.xml',r'http://zhangyuqinglabs.blob.core.windows.net/others/', r'Reberbanegade');
-#    create_index_page('../src/main/footprints', '2011-09-edinburgh-scotland', 'Edinburgh, Scotland')
-#    create_index_page('../src/main/footprints', '2011-09-highlands-scotland', 'Highlands, Scotland')
-#    create_index_page('../src/main/footprints', '2011-09-london-england', 'London, England')
-#    create_index_page('../src/main/footprints', '2012-05-stavanger-norway', 'Stavanger, Norway')
-    
+
+    #update_config_xml(r'../src/main/footprints/2013-01-torino-italy/config.xml',r'http://zhangyuqinglabs.blob.core.windows.net/gallery/', r'2013-01-torino-italy');
+    #update_config_xml(r'../src/main/footprints/2013-01-milano-italy/config.xml',r'http://zhangyuqinglabs.blob.core.windows.net/gallery/', r'2013-01-milano-italy');
+
+    #create_index_page('../src/main/footprints', '2013-01-torino-italy', 'Torino, Italy')
+    #create_index_page('../src/main/footprints', '2013-01-milano-italy', 'Milano, Italy')
     print 'Juciebox Processed...'
     
     #upload_images(account_name, account_key)
@@ -39,4 +35,4 @@ def main(account_name = None, account_key = None, ):
     stb.upload_files_to_blob()
 
 if __name__ == "__main__":
-    main()
+    main(account_name='', account_key='')
