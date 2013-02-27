@@ -7,8 +7,6 @@ output/
 
 src/juicebox/
 
-src/main/posts/
-
 *.pyc
 
 *.pyproj

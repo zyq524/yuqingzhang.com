@@ -4,8 +4,8 @@ from SitesToAzureBlob import SitesToAzureBlob
 
 def main(account_name = None, account_key = None, ):
 
-    #update_config_xml(r'../src/main/footprints/2013-01-torino-italy/config.xml',r'http://zhangyuqinglabs.blob.core.windows.net/gallery/', r'2013-01-torino-italy');
-    #update_config_xml(r'../src/main/footprints/2013-01-milano-italy/config.xml',r'http://zhangyuqinglabs.blob.core.windows.net/gallery/', r'2013-01-milano-italy');
+    #update_config_xml(r'../src/main/footprints/2013-01-torino-italy/config.xml',r'http://zhangyuqinginfo.blob.core.windows.net/gallery/', r'2013-01-torino-italy');
+    #update_config_xml(r'../src/main/footprints/2013-01-milano-italy/config.xml',r'http://zhangyuqinginfo.blob.core.windows.net/gallery/', r'2013-01-milano-italy');
 
     #create_index_page('../src/main/footprints', '2013-01-torino-italy', 'Torino, Italy')
     #create_index_page('../src/main/footprints', '2013-01-milano-italy', 'Milano, Italy')

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>YuQing Zhang's Blogs</title><link href="http://www.yuqingzhang.com" rel="alternate"></link><link href="http://www.yuqingzhang.com/feeds/yeah.atom.xml" rel="self"></link><id>http://www.yuqingzhang.com</id><updated>2012-06-18T11:37:49+02:00</updated><entry><title>My super title</title><link href="http://www.yuqingzhang.com/my-super-title.html" rel="alternate"></link><updated>2012-06-18T11:37:49+02:00</updated><author><name>YuQing Zhang</name></author><id>http://www.yuqingzhang.com/my-super-title.html</id><summary type="html">&lt;p&gt;This is my test blog by Pelican.&lt;/p&gt;
+</summary><category term="thats"></category><category term="awesome"></category></entry></feed>
