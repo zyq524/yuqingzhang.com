@@ -2,12 +2,19 @@ from juicebox import upload_images, update_config_xml, create_index_page
 from pelicantool import call_pelican
 from SitesToAzureBlob import SitesToAzureBlob
 
+###################
+# Create a folder called juicebox in the src folder.
+# Modify update_config_xml 
+# Modify create_index_page
+# uplaad_images
+# upload_files_to_blob
+###################
 def main(account_name = None, account_key = None, ):
 
-    #update_config_xml(r'../src/main/footprints/2013-01-torino-italy/config.xml',r'http://zhangyuqinginfo.blob.core.windows.net/gallery/', r'2013-01-torino-italy');
+    #update_config_xml(r'../src/main/footprints/2013-05-tokyo-japan/config.xml',r'http://zhangyuqinglabs.blob.core.windows.net/gallery/', r'2013-05-tokyo-japan');
     #update_config_xml(r'../src/main/footprints/2013-01-milano-italy/config.xml',r'http://zhangyuqinginfo.blob.core.windows.net/gallery/', r'2013-01-milano-italy');
 
-    #create_index_page('../src/main/footprints', '2013-01-torino-italy', 'Torino, Italy')
+    #create_index_page('../src/main/footprints', '2013-05-tokyo-japan', 'Tokyo, Japan')
     #create_index_page('../src/main/footprints', '2013-01-milano-italy', 'Milano, Italy')
     print 'Juciebox Processed...'
     
@@ -31,7 +38,7 @@ def main(account_name = None, account_key = None, ):
     #print 'Pelican Processed...'
 
     stb = SitesToAzureBlob('../src/main', '../output', overwrite_output=False, account_name = account_name, account_key = account_key,
-                         container_name = 'site')
+                          container_name = 'site')
     stb.upload_files_to_blob()
 
 if __name__ == "__main__":
