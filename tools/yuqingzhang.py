@@ -11,14 +11,14 @@ from SitesToAzureBlob import SitesToAzureBlob
 ###################
 def main(account_name = None, account_key = None, ):
 
-    #update_config_xml(r'../src/main/footprints/2013-05-tokyo-japan/config.xml',r'http://zhangyuqinglabs.blob.core.windows.net/gallery/', r'2013-05-tokyo-japan');
+    update_config_xml(r'../src/main/footprints/2013-06-paris-france/config.xml',r'http://zhangyuqinglabs.blob.core.windows.net/gallery/', r'2013-06-paris-france');
     #update_config_xml(r'../src/main/footprints/2013-01-milano-italy/config.xml',r'http://zhangyuqinginfo.blob.core.windows.net/gallery/', r'2013-01-milano-italy');
 
-    #create_index_page('../src/main/footprints', '2013-05-tokyo-japan', 'Tokyo, Japan')
+    create_index_page('../src/main/footprints', '2013-06-paris-france', 'Paris, France')
     #create_index_page('../src/main/footprints', '2013-01-milano-italy', 'Milano, Italy')
     print 'Juciebox Processed...'
     
-    #upload_images(account_name, account_key)
+    upload_images(account_name, account_key)
     
     #try:
     #    call_pelican('Pelican/settings.py', '../src/Pelican') 
@@ -37,8 +37,7 @@ def main(account_name = None, account_key = None, ):
     #
     #print 'Pelican Processed...'
 
-    stb = SitesToAzureBlob('../src/main', '../output', overwrite_output=False, account_name = account_name, account_key = account_key,
-                          container_name = 'site')
+    stb = SitesToAzureBlob('../src/main', '../output', overwrite_output=False, account_name = account_name, account_key = account_key, container_name = 'site')
     stb.upload_files_to_blob()
 
 if __name__ == "__main__":
