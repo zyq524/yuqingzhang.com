@@ -10,6 +10,7 @@ THEME = "themes/yuqingzhang"
 DATE_FORMAT = {
     'en': '%d %b %Y'
 }
+PATH = '../../src/pelican/'
 OUTPUT_PATH = '../../src/main/posts/'
 
 DISQUS_SITENAME = "yuqingzhang"

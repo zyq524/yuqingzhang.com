@@ -12,5 +12,5 @@ def call_pelican(settings_path, content_path):
     os.chdir(settings_dir)
     settings['THEME'] = os.path.abspath(settings['THEME'])
     os.chdir(curdir)
-    p = Pelican(settings = settings, path = content_path)
+    p = Pelican(settings = settings)
     p.run()

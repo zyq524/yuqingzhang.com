@@ -11,6 +11,8 @@
                 <header> <h2 class="entry-title"><a href="{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title}}">{{ article.title }}</a></h2> </header>
                 <footer class="post-info">
                     <abbr class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </abbr>
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <div class="addthis_native_toolbox"></div>
                 </footer><!-- /.post-info -->
                 <div class="entry-content"> 
 					{{ article.summary }} 

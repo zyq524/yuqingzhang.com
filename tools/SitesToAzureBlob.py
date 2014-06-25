@@ -47,7 +47,7 @@ class SitesToAzureBlob:
         else:
             os.environ['EMULATED'] = 'false'
  
-        self.blob_service = CloudStorageAccount(self.account_name, self.account_key).create_blob_service()
+        self.blob_service = BlobService(self.account_name, self.account_key)
         if overwrite_container:
             self.blob_service.delete_container(container_name)
             
