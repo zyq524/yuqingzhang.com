@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9be0a052-3c22-4ebb-b170-6dfffaff54e9}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>yuqingzhang.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <InterpreterId>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</InterpreterId>
+    <InterpreterVersion>2.7</InterpreterVersion>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Compile Include="juicebox.py" />
+    <Compile Include="pelicantool.py" />
+    <Compile Include="SitesToAzureBlob.py" />
+    <Compile Include="yuqingzhang.py" />
+    <Compile Include="Pelican\settings.py" />
+    <Content Include="Pelican\themes\yuqingzhang\templates\archives.html" />
+    <Content Include="Pelican\themes\yuqingzhang\templates\article.html" />
+    <Content Include="Pelican\themes\yuqingzhang\templates\author.html" />
+    <Content Include="Pelican\themes\yuqingzhang\templates\base.html" />
+    <Content Include="Pelican\themes\yuqingzhang\templates\categories.html" />
+    <Content Include="Pelican\themes\yuqingzhang\templates\category.html" />
+    <Content Include="Pelican\themes\yuqingzhang\templates\index.html" />
+    <Content Include="Pelican\themes\yuqingzhang\templates\page.html" />
+    <Content Include="Pelican\themes\yuqingzhang\templates\tags.html" />
+    <Content Include="Pelican\themes\yuqingzhang\templates\tag.html" />
+    <Content Include="Pelican\themes\yuqingzhang\static\css\pygment.css" />
+    <Content Include="Pelican\themes\yuqingzhang\static\css\reset.css" />
+    <Content Include="Pelican\themes\yuqingzhang\static\css\wide.css" />
+    <Content Include="Pelican\themes\yuqingzhang\static\images\icons\delicious.png" />
+    <Content Include="Pelican\themes\yuqingzhang\static\images\icons\lastfm.png" />
+    <Content Include="Pelican\themes\yuqingzhang\static\images\icons\linkedin.png" />
+    <Content Include="Pelican\themes\yuqingzhang\static\images\icons\rss.png" />
+    <Content Include="Pelican\themes\yuqingzhang\static\images\icons\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pelican" />
+    <Folder Include="Pelican\themes\" />
+    <Folder Include="Pelican\themes\yuqingzhang\" />
+    <Folder Include="Pelican\themes\yuqingzhang\static\" />
+    <Folder Include="Pelican\themes\yuqingzhang\static\css" />
+    <Folder Include="Pelican\themes\yuqingzhang\static\images\" />
+    <Folder Include="Pelican\themes\yuqingzhang\static\images\icons" />
+    <Folder Include="Pelican\themes\yuqingzhang\templates" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\2.7" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>
