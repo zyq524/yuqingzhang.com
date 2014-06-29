@@ -31,4 +31,4 @@ DIRECT_TEMPLATES = ('index', 'tags', 'archives')
 STATIC_PATHS = ["images", ]
 
 # A list of files to copy from the source to the destination
-FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
+#FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
