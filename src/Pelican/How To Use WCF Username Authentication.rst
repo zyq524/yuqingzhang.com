@@ -94,7 +94,7 @@ The interesting part is the <serviceCertificate />. It points to an X.509 certif
 WCF insists that the services must use an X.509 certificate to encrypt the username and password to the services and the certificate must contain a private key. A temporary certificate can be used during the development phase. To create and install the certificate, the steps are described here: http://msdn.microsoft.com/en-us/library/ff647171.aspx
 
 
-One thing that needs to be noticed is that IIS7/IIS7.5 using ApplicationPoolIdentity instead of NetworkService as the Identity. To change it, start the IIS manager, click Application Pools and find DefaultAppPool, on the right panel, click Advanced Settings…, find Process Model, and then change the Identity to NetworkService.
+One thing that needs to be noticed is that IIS7/IIS7.5 using ApplicationPoolIdentity instead of NetworkService as the Identity. To change it, start the IIS manager, click Application Pools and find DefaultAppPool, on the right panel, click Advanced Settings..., find Process Model, and then change the Identity to NetworkService.
 
 
 When debug the application, it may needed to add the following section into <behavior /> and check the error in Event Viewer.

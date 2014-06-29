@@ -26,12 +26,12 @@ I experienced several issues regarding to privilege during the hosting. Basicall
 
   Execute the following command.
   
-  .. image:: images/tips-on-hosting-wcf4-on-iis6-1.jpg
+  .. image:: static/images/tips-on-hosting-wcf4-on-iis6-1.jpg
   
   
   If you see the status of .NET4 aspnet_isapi.dll is 0, you need to enable it.
 
-  .. image:: images/tips-on-hosting-wcf4-on-iis6-2.jpg
+  .. image:: static/images/tips-on-hosting-wcf4-on-iis6-2.jpg
 
 
   
