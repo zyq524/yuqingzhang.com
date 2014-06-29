@@ -8,7 +8,7 @@
 <ul id="post-list">
 {% for article in articles_page.object_list %}        
         <li><article class="hentry post">    
-                <header> <h2 class="entry-title"><a href="{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title}}">{{ article.title }}</a></h2> </header>
+                <header> <h2 class="entry-title"><a class="title" href="{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title}}">{{ article.title }}</a></h2> </header>
                 <footer class="post-info">
                     <abbr class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </abbr>
                     <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -16,7 +16,7 @@
                 </footer><!-- /.post-info -->
                 <div class="entry-content"> 
 					{{ article.summary }} 
-					<a class="readmore" href="{{ article.url }}">read more</a>
+					<a class="readmore underlline" href="{{ article.url }}">read more</a>
 				</div><!-- /.entry-content -->
         </article></li>
 {% endfor %}
