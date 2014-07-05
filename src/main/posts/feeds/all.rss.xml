@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Qing's Blogs</title><link>http://www.yuqingzhang.com/</link><description></description><atom:link href="http://www.yuqingzhang.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 02 Nov 2012 00:00:00 +0100</lastBuildDate><item><title>Continuous Delivery Windows Azure Project by Team Foundation Service</title><link>http://www.yuqingzhang.com/continuous-delivery-windows-azure-project-by-team-foundation-service.html</link><description>&lt;p&gt;In my recent Windows Azure project, I'm using the Team Foundation Service &lt;a class="reference external" href="http://tfs.visualstudio.com/en-us/"&gt;http://tfs.visualstudio.com/en-us/&lt;/a&gt; for the project planning, source code control, etc. It is also possible to deploy the project continuously to Windows Azure. &lt;a class="reference external" href="http://www.windowsazure.com/en-us/develop/net/common-tasks/publishing-with-tfs/"&gt;http://www.windowsazure.com/en-us/develop/net/common-tasks/publishing-with-tfs/&lt;/a&gt;&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Qing's Blogs</title><link>http://www.yuqingzhang.com/</link><description></description><atom:link href="http://www.yuqingzhang.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 05 Jul 2014 00:00:00 +0200</lastBuildDate><item><title>Sitecore SPEAK - MultiSelectList</title><link>http://www.yuqingzhang.com/sitecore-speak-multiselectlist.html</link><description>&lt;p&gt;In Sitecore SPEAK, I use ListControl to bind a data source and display items in that data source. The ListControl has selectedItem and selectedItemId attributes so that I can easily access the selected item/row in the list.&lt;/p&gt;
+&lt;p&gt;Last week I was asked to create a list that user can select multiple items/rows. I looked into &lt;a class="reference external" href="http://sdn.sitecore.net/upload/sitecore7/72/speak_component_reference_sc72_a4.pdf"&gt;Sitecore SPEAK Component Reference&lt;/a&gt; and discovered that there is a control called MultiSelectList. However, the reference doesn't say too much about how to use this control. All I know is that a MultiSelectList is a Behavior control instead of a &amp;quot;real&amp;quot; list control.&lt;/p&gt;
+&lt;p&gt;After some investigation and getting help from SPEAK team, I figured out that a Behavior control extends the functionality of a component. In order to add a MultiSelectList Behavior into a ListControl, I need to do the following steps:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Add a MultiSelectList rendering into the page. It is important that even if the ListControl is on a subpage, the
+MutlitSelectList should still be added on the main page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;img alt="static/images/sitecore-speak-multiselectlist-1.png" src="static/images/sitecore-speak-multiselectlist-1.png" /&gt;
+&lt;/blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;In the ListControl, add MultiSelectList into the Behaviors property. No matter what the Id of the MultiSelectList is,
+it only needs to put the name of the control into the Behaviors property. Thus, only one MultiSelectList control is needed on a page and it can be reused by several ListControl controls on that page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;img alt="static/images/sitecore-speak-multiselectlist-2.png" src="static/images/sitecore-speak-multiselectlist-2.png" /&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That’s it. When I open the page in my browser, I can see the check box in the first column of each row.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;img alt="static/images/sitecore-speak-multiselectlist-3.png" src="static/images/sitecore-speak-multiselectlist-3.png" /&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There are two more attributes i.e. checkedItems and checkedItemIds been added into the ListCotrol’s attributes.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;img alt="static/images/sitecore-speak-multiselectlist-4.png" src="static/images/sitecore-speak-multiselectlist-4.png" /&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The only issue I have found so far is that in Sitecore 7.2, it seems that I cannot deselect all the selected rows.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Qing</dc:creator><pubDate>Sat, 05 Jul 2014 00:00:00 +0200</pubDate><guid>tag:www.yuqingzhang.com,2014-07-05:sitecore-speak-multiselectlist.html</guid><category>Sitecore</category><category>SPEAK</category></item><item><title>Continuous Delivery Windows Azure Project by Team Foundation Service</title><link>http://www.yuqingzhang.com/continuous-delivery-windows-azure-project-by-team-foundation-service.html</link><description>&lt;p&gt;In my recent Windows Azure project, I'm using the Team Foundation Service &lt;a class="reference external" href="http://tfs.visualstudio.com/en-us/"&gt;http://tfs.visualstudio.com/en-us/&lt;/a&gt; for the project planning, source code control, etc. It is also possible to deploy the project continuously to Windows Azure. &lt;a class="reference external" href="http://www.windowsazure.com/en-us/develop/net/common-tasks/publishing-with-tfs/"&gt;http://www.windowsazure.com/en-us/develop/net/common-tasks/publishing-with-tfs/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Pretty cool. However, I have a Staging configuration and a Prod configuration in my project. Both need to be deployed to Windows Azure, and each has its own cscfg and csdef file(for different storage connection strings, certificates, etc). My goal is that to make the build script be able to pick the cscfg and csdef for the corresponding configuration.&lt;/p&gt;
 &lt;p&gt;I added the cscfg files followed by Joel's post &lt;a class="reference external" href="http://blog.slalom.com/2011/08/19/building-and-deploying-windows-azure-projects-using-msbuild-and-tfs-2010/"&gt;http://blog.slalom.com/2011/08/19/building-and-deploying-windows-azure-projects-using-msbuild-and-tfs-2010/&lt;/a&gt; and changed my build process as below for staging for instance.&lt;/p&gt;
 &lt;blockquote&gt;
