@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Qing's Blogs</title><link href="http://www.yuqingzhang.com/" rel="alternate"></link><link href="http://www.yuqingzhang.com/feeds/my-blog.atom.xml" rel="self"></link><id>http://www.yuqingzhang.com/</id><updated>2014-07-05T00:00:00+02:00</updated><entry><title>Sitecore SPEAK - MultiSelectList</title><link href="http://www.yuqingzhang.com/sitecore-speak-multiselectlist.html" rel="alternate"></link><updated>2014-07-05T00:00:00+02:00</updated><author><name>Qing</name></author><id>tag:www.yuqingzhang.com,2014-07-05:sitecore-speak-multiselectlist.html</id><summary type="html">&lt;p&gt;In Sitecore SPEAK, I use ListControl to bind a data source and display items in that data source. The ListControl has selectedItem and selectedItemId attributes so that I can easily access the selected item/row in the list.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Qing's Blogs</title><link href="http://www.yuqingzhang.com/" rel="alternate"></link><link href="http://www.yuqingzhang.com/feeds/my-blog.atom.xml" rel="self"></link><id>http://www.yuqingzhang.com/</id><updated>2014-07-19T00:00:00+02:00</updated><entry><title>Sitecore SPEAK - Could not select row in ListControl</title><link href="http://www.yuqingzhang.com/sitecore-speak-could-not-select-row-in-listcontrol.html" rel="alternate"></link><updated>2014-07-19T00:00:00+02:00</updated><author><name>Qing</name></author><id>tag:www.yuqingzhang.com,2014-07-19:sitecore-speak-could-not-select-row-in-listcontrol.html</id><summary type="html">&lt;p&gt;I use ListControl from SPEAK a lot in my current project and much of the time I use self-defined datasource components for ListControl's items.&lt;/p&gt;
+&lt;p&gt;This week, I bind a ListControl to a new data source as usual. Just an example, the data source is a JSON object array.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;img alt="static/images/sitecore-speak-could-not-select-row-in-listcontrol-1.png" src="static/images/sitecore-speak-could-not-select-row-in-listcontrol-1.png" /&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I bind a ListControl to this datasource.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;img alt="static/images/sitecore-speak-could-not-select-row-in-listcontrol-2.png" src="static/images/sitecore-speak-could-not-select-row-in-listcontrol-2.png" /&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The control displays the items as expected, so far so good.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;img alt="static/images/sitecore-speak-could-not-select-row-in-listcontrol-3.png" src="static/images/sitecore-speak-could-not-select-row-in-listcontrol-3.png" /&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;However, I could not select any row in this list.&lt;/p&gt;
+&lt;p&gt;The reason is that the &amp;quot;selectedItem&amp;quot; or &amp;quot;selectedItemId&amp;quot; attribute of a ListControl requires an default &amp;quot;itemId&amp;quot; property from the datasource and the items in my JSON object array do not have &amp;quot;itemId&amp;quot; field. When I add the &amp;quot;itemId&amp;quot; into each object in my JSON object array, I can select the row again.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;img alt="static/images/sitecore-speak-could-not-select-row-in-listcontrol-4.png" src="static/images/sitecore-speak-could-not-select-row-in-listcontrol-4.png" /&gt;
+&lt;img alt="static/images/sitecore-speak-could-not-select-row-in-listcontrol-5.png" src="static/images/sitecore-speak-could-not-select-row-in-listcontrol-5.png" /&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In sum, when we define a datasource component for ListControl, we need to make sure that we include the &amp;quot;itemId&amp;quot; for each item in the datasource.&lt;/p&gt;
+</summary><category term="Sitecore"></category><category term="SPEAK"></category></entry><entry><title>Sitecore SPEAK - MultiSelectList</title><link href="http://www.yuqingzhang.com/sitecore-speak-multiselectlist.html" rel="alternate"></link><updated>2014-07-05T00:00:00+02:00</updated><author><name>Qing</name></author><id>tag:www.yuqingzhang.com,2014-07-05:sitecore-speak-multiselectlist.html</id><summary type="html">&lt;p&gt;In Sitecore SPEAK, I use ListControl to bind a data source and display items in that data source. The ListControl has selectedItem and selectedItemId attributes so that I can easily access the selected item/row in the list.&lt;/p&gt;
 &lt;p&gt;Last week I was asked to create a list that user can select multiple items/rows. I looked into &lt;a class="reference external" href="http://sdn.sitecore.net/upload/sitecore7/72/speak_component_reference_sc72_a4.pdf"&gt;Sitecore SPEAK Component Reference&lt;/a&gt; and discovered that there is a control called MultiSelectList. However, the reference doesn't say too much about how to use this control. All I know is that a MultiSelectList is a Behavior control instead of a &amp;quot;real&amp;quot; list control.&lt;/p&gt;
 &lt;p&gt;After some investigation and getting help from SPEAK team, I figured out that a Behavior control extends the functionality of a component. In order to add a MultiSelectList Behavior into a ListControl, I need to do the following steps:&lt;/p&gt;
 &lt;ul class="simple"&gt;
