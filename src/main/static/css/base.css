@@ -1,6 +1,11 @@
 /* Imports */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
 body, p {
 	font-family: "Open Sans", sans-serif;
 }
@@ -183,14 +188,14 @@ ul#albumns li p.thumb img {
 }
 .container #post-list
 {
-    margin-left: 40px;    
+    margin-left: 40px;
 }
 
 .container .post {
     margin-bottom: 45px;
 }
 
-footer.post-info 
+footer.post-info
 {
     padding-bottom: 20px;
     font-size: 12px;

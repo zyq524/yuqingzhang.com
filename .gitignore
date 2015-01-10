@@ -18,3 +18,5 @@ src/juicebox/
 .pydevproject
 
 .project
+
+src/main/static/scripts/min/
