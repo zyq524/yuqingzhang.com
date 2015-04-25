@@ -4,7 +4,7 @@ Accessing Current Recipient in Sitecore Email Experience Manager
 :date: 2015-04-25
 :tags: Sitecore, Sitecore 8, Email Experience Manager
 
-I was working on a project that uses the latest Sitecore Email Experience Manager (EXM 3.0 rev150223), but I think this blog should also apply to the earlier releases of EXM 3.0. The project was about to be able to send an email whose content is based on each recipient's interested topics. 
+I was working on a project that uses the latest Sitecore Email Experience Manager (EXM 3.0 rev150223, but this blog should also apply to the earlier releases of EXM 3.0). The project was about to be able to send an email whose content is based on each recipient's interested topics. 
 
 This is a not unusual email personalization scenario. The idea is that on the sublayout that renders the customized content, it gets the recipient context so that it can query the recipient's profile and render the sublayout according to his topics.
 
@@ -62,6 +62,6 @@ Put all these together, I figured out the following code that helped me solving 
       return ID.Parse(contactId);
     }
 
-This, indeed, looks crazy. 
+This, indeed, is unexpected complex. 
 
-I've talked to the people from the Sitecore EXM team. They have noticed this and hopefully in the next EXM release, we will be able to get the Contact Id much easier. 
+I've talked to the people in the Sitecore EXM team. They have noticed this and hopefully in the next EXM release, we will be able to get the Contact Id much easier. 
