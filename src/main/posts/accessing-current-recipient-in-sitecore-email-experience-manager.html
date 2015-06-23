@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                <title>Qing's Blogs</title>
+        <meta charset="utf-8" />
+		<meta name="description" content="YuQing Zhang's blog">
+		<meta name="keywords" content="YuQing Zhang, Yuqing Zhang, Qing Zhang, Qing, Windows Azure, .NET, Python, Open Source">
+		<meta name="author" content="YuQing Zhang">
+		<!-- Le styles -->
+		<link rel="shortcut icon" href="../static/imgs/favicon.ico">
+    
+		<link href="theme/css/pygment.css" rel="stylesheet">
+		<link href="../static/css/bootstraper/bootstrap.css" rel="stylesheet">
+		<link href="../static/css/base.css" rel="stylesheet">
+		<style type="text/css">
+		  body {
+			padding-top: 60px;
+			padding-bottom: 40px;
+		  }
+    </style>
+    <link href="../static/css/bootstraper/bootstrap-responsive.css" rel="stylesheet">
+        </head>
+
+<body>
+    <div class="navbar navbar-fixed-top" id="top-fixed">
+
+	        <p class="path">
+	          <a href="../home.html" class="pic-link"><img class="pic-next-text-one-level" src="../static/imgs/icons/metroicons/back.png" alt /></a>
+	          /<a href="../home.html">Home</a>/<a href="index.html">My blogs</a>
+	        </p>
+   
+    </div>
+	<div class="container">
+        
+<section id="main" class="post-body">  
+<div class="row-fluid">      
+<div class="span8">   
+        <header> <h1 class="entry-title">Accessing Current Recipient in Sitecore Email Experience Manager</h1> </header>
+        <footer class="post-info">
+                <abbr class="published" title="2015-04-25T00:00:00">
+                        Sat 25 April 2015
+                </abbr>
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_native_toolbox"></div>
+        </footer><!-- /.post-info -->
+        <div class="entry-content">
+        <p>I was working on a project that uses the latest Sitecore Email Experience Manager (EXM 3.0 rev150223, but this blog should also apply to the earlier releases of EXM 3.0). The project was about to be able to send an email whose content is based on each recipient's interested topics.</p>
+<p>This is a not unusual email personalization scenario. The idea is that on the sublayout that renders the customized content, it gets the recipient context so that it can query the recipient's profile and render the sublayout according to his topics.</p>
+<p>In the old ECM 2, we can achieve this fairly easy by using the <strong>ec_recipient</strong> query string.</p>
+<div class="highlight"><pre><span class="kt">var</span> <span class="n">recipient</span> <span class="p">=</span> <span class="n">Sitecore</span><span class="p">.</span><span class="n">Security</span><span class="p">.</span><span class="n">Accounts</span><span class="p">.</span><span class="n">User</span><span class="p">.</span><span class="n">FromName</span><span class="p">(</span><span class="n">Request</span><span class="p">[</span><span class="s">&quot;ec_recipient&quot;</span><span class="p">]);</span>
+</pre></div>
+<p>I tried this in the EXM project, the query string just returned nothing! Then I realized that this was because the <strong>ec_recipient</strong> worked only with the Sitecore User(SQL Server Membership) and the new EXM's biggest change is that it only supports Contacts in the MongoDB, not Membership User. So we can't use <strong>ec_recipient</strong> to get the current recipient in EXM anymore.</p>
+<p>After reading the Sitecore.EmailCampaign.config settings, I found another query string <strong>ec_contact_id</strong>. This looked very promising and it does return a GUID when the sublayout is rendering. However, this contact id is an encrypted contact Id and in order to use it to query the MongoDB we need to decrypt it first!</p>
+<p>EXM's encryption uses the private key defined in the Sitecore.EmailCampaign.config settings and the IV is the message Id. So in order to decrypt the contact Id, we also need to find out the current message Id. There is a silver lining that EXM exposes a <strong>sc_itemid</strong> query string which is the Message Root item of the current email. By using this we can get the message Id.</p>
+<p>Put all these together, I figured out the following code that helped me solving this issue.</p>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">static</span> <span class="n">ID</span> <span class="nf">GetDecryptedContactId</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">var</span> <span class="n">encryptedContactIdValue</span> <span class="p">=</span> <span class="n">WebUtil</span><span class="p">.</span><span class="n">GetQueryString</span><span class="p">(</span><span class="s">&quot;ec_contact_id&quot;</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">encryptedContactIdValue</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="k">return</span> <span class="n">ID</span><span class="p">.</span><span class="n">Null</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kt">var</span> <span class="n">messageRootItemId</span> <span class="p">=</span> <span class="n">WebUtil</span><span class="p">.</span><span class="n">GetQueryString</span><span class="p">(</span><span class="s">&quot;sc_itemid&quot;</span><span class="p">);</span>
+  <span class="kt">var</span> <span class="n">db</span> <span class="p">=</span> <span class="n">WebUtil</span><span class="p">.</span><span class="n">GetQueryString</span><span class="p">(</span><span class="s">&quot;ec_database&quot;</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">messageRootItemId</span><span class="p">)</span> <span class="p">||</span> <span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">db</span><span class="p">))</span>
+  <span class="p">{</span>
+    <span class="k">return</span> <span class="n">ID</span><span class="p">.</span><span class="n">Null</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kt">var</span> <span class="n">messageRootItem</span> <span class="p">=</span> <span class="n">Database</span><span class="p">.</span><span class="n">GetDatabase</span><span class="p">(</span><span class="n">db</span><span class="p">).</span><span class="n">GetItem</span><span class="p">(</span><span class="n">ID</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">messageRootItemId</span><span class="p">));</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">messageRootItem</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">return</span> <span class="n">ID</span><span class="p">.</span><span class="n">Null</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kt">var</span> <span class="n">messageIdValue</span> <span class="p">=</span> <span class="n">messageRootItem</span><span class="p">.</span><span class="n">ParentID</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+
+  <span class="n">ShortID</span> <span class="n">messageShortId</span> <span class="p">=</span> <span class="n">ShortID</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">messageIdValue</span><span class="p">);</span>
+  <span class="n">ShortID</span> <span class="n">encryptedContactShortId</span> <span class="p">=</span> <span class="n">ShortID</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">encryptedContactIdValue</span><span class="p">);</span>
+
+  <span class="n">Guid</span> <span class="n">contactId</span><span class="p">;</span>
+
+  <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">provder</span> <span class="p">=</span> <span class="k">new</span> <span class="n">GuidCryptoServiceProvider</span><span class="p">(</span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="n">GetBytes</span><span class="p">(</span><span class="n">GlobalSettings</span><span class="p">.</span><span class="n">PrivateKey</span><span class="p">),</span> <span class="n">messageShortId</span><span class="p">.</span><span class="n">Guid</span><span class="p">.</span><span class="n">ToByteArray</span><span class="p">()))</span>
+  <span class="p">{</span>
+    <span class="n">contactId</span> <span class="p">=</span> <span class="n">provder</span><span class="p">.</span><span class="n">Decrypt</span><span class="p">(</span><span class="n">encryptedContactShortId</span><span class="p">.</span><span class="n">Guid</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">ID</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">contactId</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>This, indeed, is unexpected complex.</p>
+<p>I've talked to the people in the Sitecore EXM team. They have noticed this and hopefully in the next EXM release, we will be able to get the Contact Id much easier.</p>
+
+        </div><!-- /.entry-content -->
+                <div class="comments">
+        <h2>Comments !</h2>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+               var disqus_identifier = "accessing-current-recipient-in-sitecore-email-experience-manager.html";
+               (function() {
+               var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+               dsq.src = 'http://yuqingzhang.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+            </script>
+        </div>
+        
+</div>
+</div>
+</section>
+        <footer id="contentinfo" class="body">
+			<p id="foot-text"></p>
+        </footer><!-- /#contentinfo -->
+		<a title="Yuqing Zhang is on Google+" rel="author" href="https://plus.google.com/u/0/117661881545158639820?rel=author" alt="Google+" title="Google+"></a>
+		<a href="http://www.yuqingzhang.com/site/posts/index" rel="me" title="YuQing Zhang"></a>
+	</div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="../static/scripts/bootstraper/bootstrap.min.js"></script>
+	<script src="../static/scripts/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js"></script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-536aa7b672ef0845"></script>
+
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-32780497-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</body>
+</html>

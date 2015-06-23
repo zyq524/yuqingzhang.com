@@ -20,3 +20,5 @@ src/juicebox/
 .project
 
 src/main/static/scripts/min/
+
+src/main/static/css/min/
