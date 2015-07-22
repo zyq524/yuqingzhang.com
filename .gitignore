@@ -15,3 +15,12 @@ Cached/
 # Make sure to include details from VisualStudio.gitignore BEFORE this
 !**/App_Data/[Pp]ackages/
 !**/[Uu]mbraco/[Dd]eveloper/[Pp]ackages
+/zyqdk.web/App_Data/NuGetBackup
+
+/zyqdk.web/obj
+/zyqdk.web/bin
+/zyqdk.web/*.user
+
+/packages
+
+/*.suo
