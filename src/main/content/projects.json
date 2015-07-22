@@ -1,5 +1,0 @@
-projects([
-{"name":"WeCanCarpool","url":"http://wecancarpool.com","description":" is a platform to make it easy for anybody to organize a carpool or find one of the already carpools, which was inspired by the young people standing down the street in front of my apartment and looking for a lift. "},
-{"name":"SitesToAzureBlob","url":"https://github.com/zyq524/stiestoazureblob","description":" lets you host a static website in your Windows Azure Storage Account. "},
-{"name":"yuqingzhang.com","url":"https://github.com/zyq524/yuqingzhang.com","description":" is my personal website, which is a complete static site hosted in Windows Azure Storage service."},
-])
