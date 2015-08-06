@@ -315,6 +315,7 @@
     <None Include="Properties\PublishProfiles\zyqdk.pubxml" />
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\Master.cshtml" />
+    <Content Include="Views\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
