@@ -207,15 +207,116 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\boostrap-files\css\bootstrap.css" />
+    <Content Include="Assets\boostrap-files\css\bootstrap.min.css" />
+    <Content Include="Assets\boostrap-files\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\boostrap-files\js\bootstrap.js" />
+    <Content Include="Assets\boostrap-files\js\bootstrap.min.js" />
+    <Content Include="Assets\boostrap-files\js\npm.js" />
+    <Content Include="Assets\css\animate.css" />
+    <Content Include="Assets\css\colour-scheme\color-blue.css" />
+    <Content Include="Assets\css\colour-scheme\color-brown.css" />
+    <Content Include="Assets\css\colour-scheme\color-green.css" />
+    <Content Include="Assets\css\colour-scheme\color-orange.css" />
+    <Content Include="Assets\css\colour-scheme\color-purple.css" />
+    <Content Include="Assets\css\colour-scheme\color-red.css" />
+    <Content Include="Assets\css\magnific-popup.css" />
+    <Content Include="Assets\css\owl.carousel.css" />
+    <Content Include="Assets\css\owl.theme.css" />
+    <Content Include="Assets\css\respons.css" />
+    <Content Include="Assets\css\style.css" />
+    <Content Include="Assets\css\switcher.css" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\css\font-awesome.css" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\css\font-awesome.min.css" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\img\404.gif" />
+    <Content Include="Assets\img\arrow.png" />
+    <Content Include="Assets\img\blog\post1.png" />
+    <Content Include="Assets\img\blog\post2.png" />
+    <Content Include="Assets\img\blog_l.png" />
+    <Content Include="Assets\img\close.svg" />
+    <Content Include="Assets\img\contact_l.png" />
+    <Content Include="Assets\img\favicons\apple-touch-icon-114x114.png" />
+    <Content Include="Assets\img\favicons\apple-touch-icon-144x144.png" />
+    <Content Include="Assets\img\favicons\apple-touch-icon-72x72.png" />
+    <Content Include="Assets\img\favicons\apple-touch-icon.png" />
+    <Content Include="Assets\img\favicons\favicon.png" />
+    <Content Include="Assets\img\loading.gif" />
+    <Content Include="Assets\img\marker-color-blue.png" />
+    <Content Include="Assets\img\marker-color-brown.png" />
+    <Content Include="Assets\img\marker-color-green.png" />
+    <Content Include="Assets\img\marker-color-orange.png" />
+    <Content Include="Assets\img\marker-color-purple.png" />
+    <Content Include="Assets\img\marker-color-red.png" />
+    <Content Include="Assets\img\menu\blog.gif" />
+    <Content Include="Assets\img\menu\blog.png" />
+    <Content Include="Assets\img\menu\contact.gif" />
+    <Content Include="Assets\img\menu\contact.png" />
+    <Content Include="Assets\img\menu\resume.gif" />
+    <Content Include="Assets\img\menu\resume.png" />
+    <Content Include="Assets\img\portfolio_l.png" />
+    <Content Include="Assets\img\resume_l.png" />
+    <Content Include="Assets\js\contact_scripts.js" />
+    <Content Include="Assets\js\jquery-1.11.2.min.js" />
+    <Content Include="Assets\js\jquery.appear.js" />
+    <Content Include="Assets\js\jquery.cookie.js" />
+    <Content Include="Assets\js\jquery.countTo.js" />
+    <Content Include="Assets\js\jquery.inview.min.js" />
+    <Content Include="Assets\js\jquery.knob.min.js" />
+    <Content Include="Assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="Assets\js\jquery.mixitup.min.js" />
+    <Content Include="Assets\js\jquery.nicescroll.min.js" />
+    <Content Include="Assets\js\menu.js" />
+    <Content Include="Assets\js\owl.carousel.min.js" />
+    <Content Include="Assets\js\portfolio_scripts.js" />
+    <Content Include="Assets\js\scripts.js" />
+    <Content Include="Assets\js\TweenMax.min.js" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config\ConnectionStrings.config" />
+    <Content Include="Assets\boostrap-files\css\bootstrap.css.map" />
+    <Content Include="Assets\boostrap-files\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\boostrap-files\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\boostrap-files\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\boostrap-files\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\fonts\FontAwesome.otf" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\less\animated.less" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\less\bordered-pulled.less" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\less\core.less" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\less\fixed-width.less" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\less\font-awesome.less" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\less\icons.less" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\less\larger.less" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\less\list.less" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\less\mixins.less" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\less\path.less" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\less\rotated-flipped.less" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\less\stacked.less" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\less\variables.less" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\scss\font-awesome.scss" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_animated.scss" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_bordered-pulled.scss" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_core.scss" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_fixed-width.scss" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_icons.scss" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_larger.scss" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_list.scss" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_mixins.scss" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_path.scss" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_rotated-flipped.scss" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_stacked.scss" />
+    <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_variables.scss" />
+    <Content Include="Assets\js\jquery-1.11.2.min.map" />
     <None Include="Properties\PublishProfiles\zyqdk.pubxml" />
+    <Content Include="Views\Home.cshtml" />
+    <Content Include="Views\Master.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -249,7 +350,7 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>xcopy C:\inetpub\wwwroot\zyq\App_Data\umbraco.sdf $(SolutionDir)Database</PostBuildEvent>
+    <PostBuildEvent>copy /y C:\inetpub\wwwroot\zyq\App_Data\umbraco.sdf $(SolutionDir)Database</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
