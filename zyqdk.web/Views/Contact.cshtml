@@ -2,7 +2,11 @@
 @{
     Layout = "Master.cshtml";
 }
-
+@section jQueryValidate{
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/mvc/5.1/jquery.validate.unobtrusive.min.js"></script>
+    @Umbraco.RenderMacro("FormsRenderScripts")
+}
     <!-- Start Head section -->
 <header class="head">
     <!-- start container -->
@@ -17,7 +21,7 @@
                 <h4 class="sub-title">@Umbraco.Field("introduction")</h4>
             </div>
             <div class="col-xs-4 col-sm-1 col-lg-1 text-right">
-                <a href="index.html" class="btn-close hover-animate"></a>
+                <a href="@CurrentPage.Up().Url" class="btn-close hover-animate"></a>
             </div>
         </div>
         <!-- end row -->
@@ -48,42 +52,28 @@
                             <td><a href="mailto:@Umbraco.Field("email")">@Umbraco.Field("email")</a></td>
                         </tr>
                         <tr>
+                            <td class="font-weight-m">Skype</td>
+                            <td>@Umbraco.Field("skype")</td>
+                        </tr>
+                        <tr>
                             <td class="font-weight-m">Website</td>
                             <td><a href="http://@Umbraco.Field("website")" target="_blank">@Umbraco.Field("website")</a></td>
                         </tr>
                     </table>
                     <!-- social icon -->
                     <div class="social">
-                        <ul class="animated" data-animation="fadeIn" data-animation-delay="600">
-                            <!-- social icons -->
-                            <li><a class="ukie-icons hover-animate" href="@Umbraco.Field("linkedinProfile")" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a class="ukie-icons hover-animate" href="@Umbraco.Field("twitterProfile")" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li><a class="ukie-icons hover-animate" href="@Umbraco.Field("facebookProfile")" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a class="ukie-icons hover-animate" href="@Umbraco.Field("githubProfile")" target="_blank"><i class="fa fa-github-alt"></i></a></li>
-                            <li><a class="ukie-icons hover-animate" href="@Umbraco.Field("stackoverflowProfile")" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
-                        </ul>
+                       @Umbraco.RenderMacro("SocialProfiles")
                     </div>
                     <!-- end social icon -->
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-lg-6">
-                <h3 class="title title-contact">Contact form</h3>
                 <!-- Start Contact Form -->
-                @*<div class="contact-form">
-                    <form action="../assets/php/contact.php" id="contact-form" method="post">
-                        <input type="text" id="user-name" name="user-name" value="" placeholder="Name" />
-                        <input type="email" id="user-email" name="user-email" value="" placeholder="Email" />
-                        <input type="hidden" id="user-status" name="user-status" value="1" />
-                        <textarea id="user-message" name="user-message" placeholder="Message"></textarea>
-                        <div class="footer-form">
-                            <input type="submit" id="submit-btn" class="btn btn-color hover-animate" value="Send Message" />
-                            <div class="info-message-form">
-                                <p>Please fill out all the fields!</p>
-                                <span class="close-msg"><i class="fa fa-close"></i></span>
-                            </div>
-                        </div>
-                    </form>
-                </div>*@
+                @Umbraco.RenderMacro("FormsRenderForm", new
+                {
+                    FormGuid = "7e865e07-ef0c-408f-a2ea-78c2a8d0b4ac"
+                })
+
                 <!-- End Contact Form -->
             </div>
         </div>
@@ -92,18 +82,3 @@
     <!-- end container -->
 </section>
 <!-- End Content section -->
-<!-- Start Map section -->
-<div class="contact-map padding-block text-center">
-    <!-- start container -->
-    <div class="container">
-        <!-- start row -->
-        @*<div class="row">
-            <div class="col-xs-12 col-sm-12 col-lg-12">
-                <div id="map" class="map"></div>
-            </div>
-        </div>*@
-        <!-- end row -->
-    </div>
-    <!-- end container -->
-</div>
-<!-- End Map section -->

@@ -23,14 +23,7 @@
                 <h3 class="sub-title">@Umbraco.Field("profileTitle")</h3>
                 <!-- social icon -->
                 <div class="social">
-                    <ul class="animated" data-animation="fadeIn" data-animation-delay="600">
-                        <!-- social icons -->
-                        <li><a class="ukie-icons hover-animate" href="@Umbraco.Field("linkedinProfile")" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a class="ukie-icons hover-animate" href="@Umbraco.Field("twitterProfile")" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="ukie-icons hover-animate" href="@Umbraco.Field("facebookProfile")" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="ukie-icons hover-animate" href="@Umbraco.Field("githubProfile")" target="_blank"><i class="fa fa-github-alt"></i></a></li>
-                        <li><a class="ukie-icons hover-animate" href="@Umbraco.Field("stackoverflowProfile")" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
-                    </ul>
+                    @Umbraco.RenderMacro("SocialProfiles")
                 </div>
                 <!-- end social icon -->
             </div>
@@ -68,7 +61,7 @@
                 </a>
                 <!-- end menu block (portfolio) -->
                 <!-- start menu block (contact) -->
-                <a href="contact.html" class="menu-li">
+                <a href="contact" class="menu-li">
                     <!-- img menu block -->
                     <span class="foto">
                         <img src="./../assets/img/menu/contact.png" class="menu-img" data-img-name="contact" alt="contact">
