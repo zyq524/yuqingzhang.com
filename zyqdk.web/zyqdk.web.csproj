@@ -276,7 +276,7 @@
     <Content Include="Assets\img\menu\contact.png" />
     <Content Include="Assets\img\menu\resume.gif" />
     <Content Include="Assets\img\menu\resume.png" />
-    <Content Include="Assets\img\portfolio_l.png" />
+    <Content Include="Assets\img\profile_l.png" />
     <Content Include="Assets\img\resume_l.png" />
     <Content Include="Assets\js\contact_scripts.js" />
     <Content Include="Assets\js\jquery-1.11.2.min.js" />
@@ -293,6 +293,8 @@
     <Content Include="Assets\js\portfolio_scripts.js" />
     <Content Include="Assets\js\scripts.js" />
     <Content Include="Assets\js\TweenMax.min.js" />
+    <Content Include="Media\1001\1.jpg" />
+    <Content Include="Media\1001\1_thumb.jpg" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -334,6 +336,7 @@
     <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_stacked.scss" />
     <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_variables.scss" />
     <Content Include="Assets\js\jquery-1.11.2.min.map" />
+    <Content Include="Media\1002\yu_qing_zhang_cv.pdf" />
     <None Include="Properties\PublishProfiles\zyqdk.pubxml" />
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\Master.cshtml" />
@@ -344,6 +347,7 @@
     <Content Include="Views\Partials\Forms\7e865e07-ef0c-408f-a2ea-78c2a8d0b4ac\Form.cshtml" />
     <Content Include="Views\Partials\Forms\Forms\7e865e07-ef0c-408f-a2ea-78c2a8d0b4ac\Fieldtype.Textfield.cshtml" />
     <Content Include="Views\Partials\Forms\Forms\7e865e07-ef0c-408f-a2ea-78c2a8d0b4ac\FieldType.Textarea.cshtml" />
+    <Content Include="Views\Resume.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

@@ -1,0 +1,190 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+             
+@{
+    Layout = "Master.cshtml";
+    var works = Umbraco.Content(1088).Children();
+    var certifications = Umbraco.Content(1082).Children();
+    var sitecoreSkills = Umbraco.Content(1094).Children();
+    var additionalSkills = Umbraco.Content(1103).Children();
+    var hobbies = Umbraco.Content(1095).Children(); 
+}
+
+    <!-- Start Head section -->
+<header class="head">
+    <!-- start container -->
+    <div class="container">
+        <!-- start row -->
+        <div class="row">
+            <div class="col-xs-8 col-sm-11 col-lg-11">
+                <img class="logo-page" src="./../assets/img/resume_l.png" alt="Profile">
+                <!-- Title Page -->
+                <h2 class="title">@CurrentPage.Name</h2>
+                <!-- Description Page -->
+                <h4 class="sub-title">@Umbraco.Field("introduction")</h4>
+            </div>
+            <div class="col-xs-4 col-sm-1 col-lg-1 text-right">
+                <a href="@CurrentPage.Up().Url" class="btn-close hover-animate"></a>
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</header>
+<!-- End Head section -->
+<!-- Start Content section -->
+<section class="content border-bottom padding-block">
+    <!-- start container -->
+    <div class="container">
+        <!-- start row -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-7">
+                <h3 class="title">@Umbraco.Field("profileTitle")</h3>
+                @Umbraco.Field("profileSummary")
+              
+                <p>
+                    <a href="mailto:yqz@chingconsult.dk" class="btn hover-animate">Hire me Now</a><a href="@Umbraco.Media(CurrentPage.CVPath).Url" class="btn btn-color hover-animate">Download CV</a>
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-lg-5">
+
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- End Content section -->
+
+<!-- Start Content section -->
+<section class="content padding-block border-bottom">
+    <!-- start container -->
+    <div class="container">
+        <!-- start row -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-6">
+                <h3 class="title title-resume">Work</h3>
+                <div class="block-grey">
+                    <div id="work-slider" class="owl-carousel owl-theme">
+                        @foreach (var work in works)
+                        {
+                            <div class="item">
+                                <table>
+                                    <tr>
+                                        <td class="font-weight-m width-td1">Company Name</td>
+                                        <td>@work.company</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-weight-m">Period</td>
+                                        <td>@work.period</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-weight-m">Post</td>
+                                        <td>@work.jobTitle</td>
+                                    </tr>
+                                </table>
+                                <p>
+                                    @work.jobDescription
+                                </p>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-lg-6">
+                <h3 class="title title-resume">Certifications</h3>
+                <div class="block-grey">
+                    <div id="education-slider" class="owl-carousel owl-theme">
+                        @foreach (var certification in certifications)
+                        {
+                            <div class="item">
+                                <table>
+                                    <tr>
+                                        <td class="font-weight-m width-td">Name</td>
+                                        <td>@certification.name</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-weight-m">Authority</td>
+                                        <td>@certification.authority</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-weight-m">Year</td>
+                                        <td>@certification.date.Year</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- End Content section -->
+<!-- Start Skills section -->
+<section class="skills border-bottom padding-block">
+    <!-- start container -->
+    <div class="container">
+        <!-- start row -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-6">
+                <h3 class="title title-skills">Sitecore skills</h3>
+                @foreach (var skill in sitecoreSkills)
+                {
+                    <label class="progress-bar-label">@skill.name</label>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="@skill.level" aria-valuemin="0" aria-valuemax="100">
+                            <span>@skill.level%</span>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-xs-12 col-sm-12 col-lg-6">
+                <h3 class="title title-skills">Additional skills</h3>
+                @foreach (var skill in additionalSkills)
+                {
+                    <div class="circle-progress-block">
+                        <div class="circle-progress">
+                            <input type="text" class="dial" value="@skill.level" data-color="#00b6f9" data-from="0" data-to="99" />
+                        </div>
+                        <label class="circle-progress-label">@skill.name</label>
+                    </div>
+                }
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- End Skills section -->
+<!-- Start Info section -->
+<section class="info border-bottom padding-block text-center">
+    <!-- start container -->
+    <div class="container">
+        <!-- start row -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+                <h3 class="title">Hobbies &amp; Interest</h3>
+            </div>
+        </div>
+        <!-- end row -->
+        <!-- start row -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+                @foreach (var hobby in hobbies)
+                {
+                    <div class="circle-block ">
+                        <span class="icon hover-animate"><i class="fa @hobby.icon"></i></span>
+                        <span class="name hover-animate">@hobby.name</span>
+                    </div>
+                }
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- End Info section -->
