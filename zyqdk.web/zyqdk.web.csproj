@@ -336,7 +336,6 @@
     <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_stacked.scss" />
     <Content Include="Assets\fonts\font-awesome-4.3.0\scss\_variables.scss" />
     <Content Include="Assets\js\jquery-1.11.2.min.map" />
-    <Content Include="Media\1002\yu_qing_zhang_cv.pdf" />
     <None Include="Properties\PublishProfiles\zyqdk.pubxml" />
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\Master.cshtml" />

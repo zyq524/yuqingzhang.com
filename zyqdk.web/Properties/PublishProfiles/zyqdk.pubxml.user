@@ -994,7 +994,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Resume.cshtml">
-      <publishTime>08/09/2015 00:01:01</publishTime>
+      <publishTime>08/09/2015 00:12:19</publishTime>
     </File>
     <File Include="web.config">
       <publishTime>01/01/0001 00:00:00</publishTime>
