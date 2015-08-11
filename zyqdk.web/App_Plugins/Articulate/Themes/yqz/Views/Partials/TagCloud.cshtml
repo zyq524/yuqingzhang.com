@@ -1,0 +1,16 @@
+@using Articulate
+@inherits UmbracoViewPage<Articulate.Models.IMasterModel>
+
+@{
+    var tagModel = Umbraco.GetPostTagCollection(Model);
+}
+
+<aside class="widget widget_tag_cloud">
+    <h3 class="widget-title">Tags</h3>
+    <div class="tagcloud">
+        @foreach (var tag in tagModel)
+        {
+            <a href="@tag.TagUrl" class="hover-animate">@tag.TagName</a>
+        }
+    </div>
+</aside>

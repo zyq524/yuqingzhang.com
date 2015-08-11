@@ -1,0 +1,28 @@
+@using Articulate
+@inherits UmbracoViewPage<Articulate.Models.IMasterModel>
+
+@{
+    var recent = Umbraco.GetRecentPosts(Model, 5);
+}
+@foreach (var post in recent)
+{
+    @(recent.IndexOf(post) == recent.Count() - 1 ? Html.Raw("<div class='post last'>") : Html.Raw("<div class='post'>"))
+    <!-- start post -->
+    <!-- start title post -->
+    <h3 class="title title-blog">@post.Name</h3>
+    <!-- end title post -->
+    <div class="entry-byline">
+        <i class="fa fa-clock-o"></i>
+        <time class="entry-published right-border">@post.PublishedDate.ToString("dddd, dd MMMM, yyyy")</time>
+        <i class="fa fa-comment"></i>
+        <a data-disqus-identifier="@post.Id" class="comment-link" href="@post.Url#disqus_thread"></a>
+    </div>
+    <!-- start desc post -->
+    <p>
+        @post.Excerpt
+    </p>
+    <!-- end desc post -->
+    <a href="@post.Url" class="btn hover-animate btn-color-hover">Read More</a>
+    @Html.Raw("</div")
+    <!-- end post -->
+}

@@ -226,7 +226,7 @@ $(document).ready(function(){
     var colour_scheme = $.cookie("colour-scheme");
     var colour_bg = $.cookie("colour-bg");
     if( colour_scheme != "" && colour_scheme != undefined ){
-        $(style).attr('href', 'assets/css/colour-scheme/' + colour_scheme + '.css');
+        $(style).attr('href', '/assets/css/colour-scheme/' + colour_scheme + '.css');
         $(style).attr('data-color', colour_scheme);
     } else{
         $.cookie("colour-scheme","color-blue");

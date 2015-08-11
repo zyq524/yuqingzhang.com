@@ -1,0 +1,25 @@
+@using Articulate
+@using Umbraco.Core
+@model Articulate.Models.PostModel
+@{
+    Layout = "Master.cshtml";
+    ViewBag.BackUrl = Url.Content("~/blog");
+    ViewBag.Title = Model.Name;
+}
+
+<section class="blog padding-block">
+    <!-- start container -->
+    <div class="container">
+        <!-- start row -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-8">
+                <!-- start post -->
+                <div class="post one-post">
+                    @Html.ThemedPartial(Model, "Post", Model)
+                </div>
+            </div>
+            @Html.ThemedPartial(Model, "SideWidgets")
+        </div>
+    </div>
+    <!-- end container -->
+</section>

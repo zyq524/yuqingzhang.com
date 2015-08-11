@@ -1,0 +1,12 @@
+@using Articulate
+@inherits UmbracoViewPage<Articulate.Models.IMasterModel>
+
+<div class="col-xs-12 col-sm-12 col-lg-4">
+    <!-- start slidebar -->
+    @Html.ThemedPartial(Model, "SearchBox")
+    @Html.ThemedPartial(Model, "Follow")
+    @Html.ThemedPartial(Model, "Categories")
+    @Html.ThemedPartial(Model, "TagCloud")
+    
+    <!-- end slidebar -->
+</div>

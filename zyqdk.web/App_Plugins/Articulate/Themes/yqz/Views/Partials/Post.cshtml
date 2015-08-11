@@ -1,0 +1,28 @@
+@using Articulate
+@using Umbraco.Core
+@model Articulate.Models.PostModel
+
+@*This partial accepts view data parameters to modify how it is displayed - IsListView*@
+
+<!-- start title post -->
+<h3 class="title title-blog">@Model.Name</h3>
+<!-- end title post -->
+<div class="entry-byline">
+    <i class="fa fa-clock-o"></i>
+    <time class="entry-published right-border">@Model.PublishedDate.ToString("dddd, dd MMMM, yyyy")</time>
+    <i class="fa fa-comment"></i>
+    <a data-disqus-identifier="@Model.Id" class="comment-link" href="@Model.Url#disqus_thread"></a>
+    @Html.ThemedPartial(Model, "Sharing")
+</div>
+<!-- start text post -->
+@Model.Body
+<!-- end text post -->
+    
+    
+    @if ((ViewBag.IsListView == null || ViewBag.IsListView == false) && Model.EnableComments)
+    {
+        <br/>
+        @Html.ThemedPartial(Model, "CommentsDisqus")
+        @*@Html.ThemedPartial(Model, "CommentsGooglePlus")*@
+        @*@Html.ThemedPartial(Model, "CommentsFacebook")*@
+    }

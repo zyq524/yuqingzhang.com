@@ -1,0 +1,15 @@
+@using Articulate
+@inherits UmbracoViewPage<Articulate.Models.IMasterModel>
+
+@{
+    var categories = Umbraco.GetAllCategories(Model);
+}
+<aside class="widget widget_categories">
+    <h3 class="widget-title">Categories</h3>
+    <ul>
+        @foreach (var category in categories)
+        {
+            <li class="cat-item cat-item-6"><a href="@Url.ArticulateCategoryUrl(Model, category)">@category</a></li>
+        }
+    </ul>
+</aside>

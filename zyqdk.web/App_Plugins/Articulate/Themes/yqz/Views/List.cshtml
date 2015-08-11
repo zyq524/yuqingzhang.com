@@ -1,0 +1,53 @@
+﻿@using Articulate
+@using Articulate.Models
+@using ClientDependency.Core.Mvc
+@using Umbraco.Core
+@using Umbraco.Web
+@using Umbraco.Web.Models
+@inherits UmbracoViewPage<ListModel>
+@{
+    Layout = "Master.cshtml";
+    if (Model.DocumentTypeAlias == "ArticulateArchive")
+    {
+        ViewBag.BackUrl = "/";
+        ViewBag.Title = Model.RootBlogNode.Name;
+    }
+    else
+    {
+        ViewBag.BackUrl = Url.Content("~/blog");
+        ViewBag.Title = Model.Name;
+    }
+}
+<!-- Start Blog section -->
+<section class="blog padding-block">
+    <!-- start container -->
+    <div class="container">
+        <!-- start row -->
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-lg-8">
+                @*Render different content if it's the homepage*@
+                @if (Model.DocumentTypeAlias == "ArticulateArchive")
+                {
+                    @Html.ThemedPartial(Model, "Recent")
+                }
+                else
+                {
+                    foreach (var post in Model.Children<PostModel>())
+                    {
+                        @Html.ThemedPartial(Model, "Recent", post, new ViewDataDictionary { { "IsListView", true } })
+                    }
+                }
+                <!-- start pagination -->
+                @Html.ThemedPartial(Model, "Pager", Model.Pages)
+                <!-- end pagination -->
+            </div>
+
+            @Html.ThemedPartial(Model, "SideWidgets")
+
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- End Blog section -->

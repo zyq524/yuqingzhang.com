@@ -1,0 +1,130 @@
+﻿@using ClientDependency.Core.Mvc
+@using Articulate;
+@model Articulate.Models.IMasterModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta name="author" content="ukieweb" />
+    <meta name="keywords" content="ukieCard, css3, template, html5 template" />
+    <meta name="description" content="ukieCard - Personal Vcard & Resume HTML Template" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- Font Awesome -->
+    <link type="text/css" media="all" href="@Url.Content("~/assets/fonts/font-awesome-4.3.0/css/font-awesome.min.css")" rel="stylesheet" />
+    <!-- Libs CSS -->
+    <link type="text/css" media="all" href="@Url.Content("~/assets/boostrap-files/css/bootstrap.min.css")" rel="stylesheet" />
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/owl.carousel.css")">
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/owl.theme.css")">
+    <!-- Animate CSS -->
+    <link type="text/css" media="all" href="@Url.Content("~/assets/css/animate.css")" rel="stylesheet" />
+    <!-- Template CSS -->
+    <link type="text/css" media="all" href="@Url.Content("~/assets/css/style.css")" rel="stylesheet" />
+    <!-- Switcher CSS -->
+    <link type="text/css" media="all" href="@Url.Content("~/assets/css/switcher.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/assets/css/colour-scheme/color-blue.css")" rel="stylesheet" type="text/css" data-color="color-blue" media="all" id="stylesheet-new">
+    <!-- Responsive CSS -->
+    <link type="text/css" media="all" href="@Url.Content("~/assets/css/respons.css")" rel="stylesheet" />
+    <!-- Style Switcher -->
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="144x144" href="@Url.Content("~/assets/img/favicons/apple-touch-icon-144x144.png")" />
+    <link rel="apple-touch-icon" sizes="114x114" href="@Url.Content("~/assets/img/favicons/apple-touch-icon-114x114.png")" />
+    <link rel="apple-touch-icon" sizes="72x72" href="@Url.Content("~/assets/img/favicons/apple-touch-icon-72x72.png")" />
+    <link rel="apple-touch-icon" href="@Url.Content("~/assets/img/favicons/apple-touch-icon.png")" />
+    <link rel="shortcut icon" href="@Url.Content("~/assets/img/favicons/favicon.png")" />
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <!-- Load page -->
+    <div class="animationload">
+        <div class="loader"></div>
+    </div>
+    <!-- End load page -->
+<div id="wraper">
+    <!-- Start Head section -->
+    <header class="head">
+        <!-- start container -->
+        <div class="container">
+            <!-- start row -->
+            <div class="row">
+                <div class="col-xs-8 col-sm-11 col-lg-11">
+                    <img class="logo-page" src="@Url.Content("~/assets/img/blog_l.png")" alt="Blog">
+                    <!-- Title Page -->
+                    <h2 class="title">@Model.BlogTitle</h2>
+                    <!-- Description Page -->
+                    <h4 class="sub-title">@Model.BlogDescription</h4>
+                </div>
+                <div class="col-xs-4 col-sm-1 col-lg-1 text-right">
+                    <a href="@ViewBag.BackUrl" class="btn-close hover-animate"></a>
+                </div>
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </header>
+    <!-- End Head section -->
+    @RenderBody()
+    <!-- Start Footer section -->
+    <footer class="footer">
+        <!-- start container -->
+        <div class="container">
+            <!-- start row -->
+            <div class="row">
+                <!-- start phone number -->
+                <div class="col-xs-12 col-sm-6 col-lg-3">
+                    <a href="tel:+4560710765" class="hover-animate">
+                        <span class="ukie-icons hover-animate"><i class="fa fa-phone"></i></span> +45 60710765
+                    </a>
+                </div>
+                <!-- end phone number -->
+                <!-- start email -->
+                <div class="col-xs-12 col-sm-6 col-lg-3">
+                    <a href="mailto:yqz@chingconsult.dk" class="hover-animate">
+                        <span class="ukie-icons hover-animate"><i class="fa fa-paper-plane"></i></span> yqz@chingconsult.dk
+                    </a>
+                </div>
+                <!-- end email -->
+                <!-- start Copyright -->
+                <div class="col-xs-12 col-sm-6 col-lg-3 text-right">
+                    <span class="copyright">Copyright © @DateTime.Now.Year All right reserved</span>
+                </div>
+                <!-- end Copyright -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </footer>
+    <!-- End Footer section -->
+</div>
+    <!-- Scroll to Top -->
+    <a href="#" class="btn scrollToTop"><i class="fa fa-angle-up"></i></a>
+    <!-- End Scroll to Top -->
+    <!-- Scripts -->
+    <script src="@Url.Content("~/assets/js/jquery-1.11.2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/boostrap-files/js/bootstrap.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/jquery.appear.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/jquery.nicescroll.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/jquery.mixitup.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/jquery.magnific-popup.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/owl.carousel.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/jquery.inview.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/jquery.knob.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/jquery.cookie.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/scripts.js")" type="text/javascript"></script>
+    @RenderSection("jQueryValidate", required: false)
+</body>
+</html>
