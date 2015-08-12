@@ -235,6 +235,8 @@
     <Content Include="Assets\boostrap-files\js\bootstrap.js" />
     <Content Include="Assets\boostrap-files\js\bootstrap.min.js" />
     <Content Include="Assets\boostrap-files\js\npm.js" />
+    <Content Include="Assets\css\404respons.css" />
+    <Content Include="Assets\css\404style.css" />
     <Content Include="Assets\css\animate.css" />
     <Content Include="Assets\css\colour-scheme\color-blue.css" />
     <Content Include="Assets\css\colour-scheme\color-brown.css" />
@@ -242,6 +244,8 @@
     <Content Include="Assets\css\colour-scheme\color-orange.css" />
     <Content Include="Assets\css\colour-scheme\color-purple.css" />
     <Content Include="Assets\css\colour-scheme\color-red.css" />
+    <Content Include="Assets\css\exceptionrespons.css" />
+    <Content Include="Assets\css\exceptionstyle.css" />
     <Content Include="Assets\css\magnific-popup.css" />
     <Content Include="Assets\css\owl.carousel.css" />
     <Content Include="Assets\css\owl.theme.css" />
@@ -252,7 +256,7 @@
     <Content Include="Assets\fonts\font-awesome-4.3.0\css\font-awesome.min.css" />
     <Content Include="Assets\fonts\font-awesome-4.3.0\fonts\fontawesome-webfont.svg" />
     <Content Include="Assets\img\404.gif" />
-    <Content Include="Assets\img\arrow.png" />
+    <Content Include="Assets\img\bear.png" />
     <Content Include="Assets\img\blog\post1.png" />
     <Content Include="Assets\img\blog\post2.png" />
     <Content Include="Assets\img\blog_l.png" />
@@ -263,21 +267,24 @@
     <Content Include="Assets\img\favicons\apple-touch-icon-72x72.png" />
     <Content Include="Assets\img\favicons\apple-touch-icon.png" />
     <Content Include="Assets\img\favicons\favicon.png" />
+    <Content Include="Assets\img\four.png" />
     <Content Include="Assets\img\loading.gif" />
-    <Content Include="Assets\img\marker-color-blue.png" />
-    <Content Include="Assets\img\marker-color-brown.png" />
-    <Content Include="Assets\img\marker-color-green.png" />
-    <Content Include="Assets\img\marker-color-orange.png" />
-    <Content Include="Assets\img\marker-color-purple.png" />
-    <Content Include="Assets\img\marker-color-red.png" />
     <Content Include="Assets\img\menu\blog.gif" />
     <Content Include="Assets\img\menu\blog.png" />
     <Content Include="Assets\img\menu\contact.gif" />
     <Content Include="Assets\img\menu\contact.png" />
     <Content Include="Assets\img\menu\resume.gif" />
     <Content Include="Assets\img\menu\resume.png" />
+    <Content Include="Assets\img\nail.png" />
     <Content Include="Assets\img\profile_l.png" />
     <Content Include="Assets\img\resume_l.png" />
+    <Content Include="Assets\img\tools.png" />
+    <Content Include="Assets\img\wall-1.png" />
+    <Content Include="Assets\img\worker.png" />
+    <Content Include="Assets\img\z-1.gif" />
+    <Content Include="Assets\img\z.gif" />
+    <Content Include="Assets\img\zero.png" />
+    <Content Include="Assets\js\404scripts.js" />
     <Content Include="Assets\js\contact_scripts.js" />
     <Content Include="Assets\js\jquery-1.11.2.min.js" />
     <Content Include="Assets\js\jquery.appear.js" />
@@ -289,6 +296,7 @@
     <Content Include="Assets\js\jquery.mixitup.min.js" />
     <Content Include="Assets\js\jquery.nicescroll.min.js" />
     <Content Include="Assets\js\menu.js" />
+    <Content Include="Assets\js\modernizr.custom.js" />
     <Content Include="Assets\js\owl.carousel.min.js" />
     <Content Include="Assets\js\portfolio_scripts.js" />
     <Content Include="Assets\js\scripts.js" />
@@ -351,7 +359,7 @@
     <Content Include="App_Plugins\Articulate\Themes\yqz\Views\Tags.cshtml" />
     <Content Include="App_Plugins\Articulate\Themes\yqz\Views\Web.config" />
     <Content Include="App_Plugins\Articulate\Themes\yqz\Views\Partials\Follow.cshtml" />
-    <Content Include="Config\CustomErrors.config" />
+    <Content Include="Config\umbracoSettings.config" />
     <None Include="Properties\PublishProfiles\zyqdk.pubxml" />
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\Master.cshtml" />
@@ -363,6 +371,9 @@
     <Content Include="Views\Partials\Forms\Forms\7e865e07-ef0c-408f-a2ea-78c2a8d0b4ac\Fieldtype.Textfield.cshtml" />
     <Content Include="Views\Partials\Forms\Forms\7e865e07-ef0c-408f-a2ea-78c2a8d0b4ac\FieldType.Textarea.cshtml" />
     <Content Include="Views\Resume.cshtml" />
+    <Content Include="Views\NotFound.cshtml" />
+    <Content Include="Web.config" />
+    <Content Include="Views\Exception.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
