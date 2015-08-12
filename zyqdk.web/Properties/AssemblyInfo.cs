@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("zyqdk.web")]
+[assembly: AssemblyTitle("zyqdk.Web")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("zyqdk.web")]
+[assembly: AssemblyProduct("zyqdk.Web")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1861d0f5-4e08-43e6-b0bc-4568a1c937a9")]
+[assembly: Guid("2d1acd24-89da-47c7-af0e-146172b78a48")]
 
 // Version information for an assembly consists of the following four values:
 //
